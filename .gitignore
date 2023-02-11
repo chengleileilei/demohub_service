@@ -2,6 +2,7 @@ __pycache__/
 misc/
 web/source_images/*
 web/images/*
+web/*.log
 demohub/docs/
 demohub/utils/
 demohub/demohub/object_detection/mmdetection/checkpoints/*
