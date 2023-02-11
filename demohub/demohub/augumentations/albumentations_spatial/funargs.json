@@ -1,0 +1,93 @@
+{
+    "pixel-level": {
+        "Blur": {
+            "blur_limit": {
+                "type": "int",
+                "values": [
+                    3,
+                    "Infinity"
+                ],
+                "default": 7
+            },
+            "p": {
+                "type": "float",
+                "values": [
+                    0,
+                    1
+                ],
+                "default": 0.5
+            }
+        },
+        "CLAHE": {
+            "clip_limit": {
+                "type": "float",
+                "values": [
+                    1,
+                    "Infinity"
+                ],
+                "default": 4
+            },
+            "tile_grid_size": {
+                "type": "tuple",
+                "values": [
+                    [
+                        1,
+                        1
+                    ],
+                    [
+                        "Infinity",
+                        "Infinity"
+                    ]
+                ],
+                "default": [
+                    8,
+                    8
+                ]
+            },
+            "p": {
+                "type": "float",
+                "values": [
+                    0,
+                    1
+                ],
+                "default": 0.5
+            }
+        }
+    },
+    "spatial-level": {
+        "Affine": {
+            "scale": {
+                "type": "float",
+                "values": [
+                    0,
+                    1
+                ],
+                "default": 0.5
+            },
+            "translate_percent": {
+                "type": "float",
+                "values": [
+                    0,
+                    1
+                ],
+                "default": 0.5
+            },
+            "translate_px": {
+                "type": "int",
+                "values": [
+                    0,
+                    "Infinity"
+                ],
+                "default": 0
+            },
+            "p": {
+                "type": "float",
+                "values": [
+                    0,
+                    1
+                ],
+                "default": 0.5
+            }
+        }
+    }
+}

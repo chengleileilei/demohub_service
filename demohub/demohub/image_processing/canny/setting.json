@@ -1,0 +1,53 @@
+{
+    "args": {
+        "space": {
+            "type": "select",
+            "values": [
+                "rgb",
+                "hsv"
+            ],
+            "default": "rgb"
+        }
+    },
+    "introduction": {
+        "tittle": {
+            "en": "INTRODUCTION",
+            "cn": "介绍"
+        },
+        "text": {
+            "en": [
+                "There is no model introduction information!",
+                "For more information, please visit "
+            ],
+            "cn": [
+                "暂无模型介绍信息！",
+                "欲了解更多信息，请访问"
+            ]
+        },
+        "link": {
+            "text": {
+                "en": "https://mmcheng.net",
+                "cn": "https://mmcheng.net"
+            },
+            "url": "https://mmcheng.net"
+        }
+    },
+    "likes": 5,
+    "pageviews": 175,
+    "author": "DemoHub",
+    "conda_env": "demohub.canny",
+    "name": {
+        "en": "canny",
+        "cn": "canny"
+    },
+    "input_image_name": "demo.jpg",
+    "output_image_name": "demo_res.jpg",
+    "show_images": [
+        "../../../../web/images/demo.jpg",
+        "../../../../web/images/airplane.jpg",
+        "../../../../web/images/bird.jpg",
+        "../../../../web/images/cat.jpg",
+        "../../../../web/images/chair.jpg",
+        "../../../../web/images/deer.jpg"
+    ]
+}

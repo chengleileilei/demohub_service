@@ -1,0 +1,895 @@
+{
+    "Affine": {
+        "args": {
+            "scale": {
+                "default": "None"
+            },
+            "translate_percent": {
+                "default": "None"
+            },
+            "translate_px": {
+                "default": "None"
+            },
+            "rotate": {
+                "default": "None"
+            },
+            "shear": {
+                "default": "None"
+            },
+            "interpolation": {
+                "default": "1"
+            },
+            "mask_interpolation": {
+                "default": "0"
+            },
+            "cval": {
+                "default": "0"
+            },
+            "cval_mask": {
+                "default": "0"
+            },
+            "mode": {
+                "default": "0"
+            },
+            "fit_output": {
+                "default": "False"
+            },
+            "keep_ratio": {
+                "default": "False"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Augmentation to apply affine transformations to images.\n    This is mostly a wrapper around the corresponding classes and functions in OpenCV.\n\n    Affine transformations involve:\n\n        - Translation (\"move\" image on the x-/y-axis)\n        - Rotation\n        - Scaling (\"zoom\" in/out)\n        - Shear (move one side of the image, turning a square into a trapezoid)\n\n    All such transformations can create \"new\" pixels in the image without a defined content, e.g.\n    if the image is translated to the left, pixels are created on the right.\n    A method has to be defined to deal with these pixel values.\n    The parameters `cval` and `mode` of this class deal with this.\n\n    Some transformations involve interpolations between several pixels\n    of the input image to generate output pixel values. The parameters `interpolation` and\n    `mask_interpolation` deals with the method of interpolation used for this.\n\n    Args:\n        scale (number, tuple of number or dict): Scaling factor to use, where ``1.0`` denotes \"no change\" and\n            ``0.5`` is zoomed out to ``50`` percent of the original size.\n                * If a single number, then that value will be used for all images.\n                * If a tuple ``(a, b)``, then a value will be uniformly sampled per image from the interval ``[a, b]``.\n                  That the same range will be used for both x- and y-axis. To keep the aspect ratio, set\n                  ``keep_ratio=True``, then the same value will be used for both x- and y-axis.\n                * If a dictionary, then it is expected to have the keys ``x`` and/or ``y``.\n                  Each of these keys can have the same values as described above.\n                  Using a dictionary allows to set different values for the two axis and sampling will then happen\n                  *independently* per axis, resulting in samples that differ between the axes. Note that when\n                  the ``keep_ratio=True``, the x- and y-axis ranges should be the same.\n        translate_percent (None, number, tuple of number or dict): Translation as a fraction of the image height/width\n            (x-translation, y-translation), where ``0`` denotes \"no change\"\n            and ``0.5`` denotes \"half of the axis size\".\n                * If ``None`` then equivalent to ``0.0`` unless `translate_px` has a value other than ``None``.\n                * If a single number, then that value will be used for all images.\n                * If a tuple ``(a, b)``, then a value will be uniformly sampled per image from the interval ``[a, b]``.\n                  That sampled fraction value will be used identically for both x- and y-axis.\n                * If a dictionary, then it is expected to have the keys ``x`` and/or ``y``.\n                  Each of these keys can have the same values as described above.\n                  Using a dictionary allows to set different values for the two axis and sampling will then happen\n                  *independently* per axis, resulting in samples that differ between the axes.\n        translate_px (None, int, tuple of int or dict): Translation in pixels.\n                * If ``None`` then equivalent to ``0`` unless `translate_percent` has a value other than ``None``.\n                * If a single int, then that value will be used for all images.\n                * If a tuple ``(a, b)``, then a value will be uniformly sampled per image from\n                  the discrete interval ``[a..b]``. That number will be used identically for both x- and y-axis.\n                * If a dictionary, then it is expected to have the keys ``x`` and/or ``y``.\n                  Each of these keys can have the same values as described above.\n                  Using a dictionary allows to set different values for the two axis and sampling will then happen\n                  *independently* per axis, resulting in samples that differ between the axes.\n        rotate (number or tuple of number): Rotation in degrees (**NOT** radians), i.e. expected value range is\n            around ``[-360, 360]``. Rotation happens around the *center* of the image,\n            not the top left corner as in some other frameworks.\n                * If a number, then that value will be used for all images.\n                * If a tuple ``(a, b)``, then a value will be uniformly sampled per image from the interval ``[a, b]``\n                  and used as the rotation value.\n        shear (number, tuple of number or dict): Shear in degrees (**NOT** radians), i.e. expected value range is\n            around ``[-360, 360]``, with reasonable values being in the range of ``[-45, 45]``.\n                * If a number, then that value will be used for all images as\n                  the shear on the x-axis (no shear on the y-axis will be done).\n                * If a tuple ``(a, b)``, then two value will be uniformly sampled per image\n                  from the interval ``[a, b]`` and be used as the x- and y-shear value.\n                * If a dictionary, then it is expected to have the keys ``x`` and/or ``y``.\n                  Each of these keys can have the same values as described above.\n                  Using a dictionary allows to set different values for the two axis and sampling will then happen\n                  *independently* per axis, resulting in samples that differ between the axes.\n        interpolation (int): OpenCV interpolation flag.\n        mask_interpolation (int): OpenCV interpolation flag.\n        cval (number or sequence of number): The constant value to use when filling in newly created pixels.\n            (E.g. translating by 1px to the right will create a new 1px-wide column of pixels\n            on the left of the image).\n            The value is only used when `mode=constant`. The expected value range is ``[0, 255]`` for ``uint8`` images.\n        cval_mask (number or tuple of number): Same as cval but only for masks.\n        mode (int): OpenCV border flag.\n        fit_output (bool): If True, the image plane size and position will be adjusted to tightly capture\n            the whole image after affine transformation (`translate_percent` and `translate_px` are ignored).\n            Otherwise (``False``),  parts of the transformed image may end up outside the image plane.\n            Fitting the output shape can be useful to avoid corners of the image being outside the image plane\n            after applying rotations. Default: False\n        keep_ratio (bool): When True, the original aspect ratio will be kept when the random scale is applied.\n                           Default: False.\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image, mask, keypoints, bboxes\n\n    Image types:\n        uint8, float32\n\n    "
+    },
+    "BBoxSafeRandomCrop": {
+        "args": {
+            "erosion_rate": {
+                "default": "0.0"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "1.0"
+            }
+        },
+        "doc": "Crop a random part of the input without loss of bboxes.\n    Args:\n        erosion_rate (float): erosion rate applied on input image height before crop.\n        p (float): probability of applying the transform. Default: 1.\n    Targets:\n        image, mask, bboxes\n    Image types:\n        uint8, float32\n    "
+    },
+    "CenterCrop": {
+        "args": {
+            "height": {
+                "default": ""
+            },
+            "width": {
+                "default": ""
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "1.0"
+            }
+        },
+        "doc": "Crop the central part of the input.\n\n    Args:\n        height (int): height of the crop.\n        width (int): width of the crop.\n        p (float): probability of applying the transform. Default: 1.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        uint8, float32\n\n    Note:\n        It is recommended to use uint8 images as input.\n        Otherwise the operation will require internal conversion\n        float32 -> uint8 -> float32 that causes worse performance.\n    "
+    },
+    "CoarseDropout": {
+        "args": {
+            "max_holes": {
+                "default": "8"
+            },
+            "max_height": {
+                "default": "8"
+            },
+            "max_width": {
+                "default": "8"
+            },
+            "min_holes": {
+                "default": "None"
+            },
+            "min_height": {
+                "default": "None"
+            },
+            "min_width": {
+                "default": "None"
+            },
+            "fill_value": {
+                "default": "0"
+            },
+            "mask_fill_value": {
+                "default": "None"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "CoarseDropout of the rectangular regions in the image.\n\n    Args:\n        max_holes (int): Maximum number of regions to zero out.\n        max_height (int, float): Maximum height of the hole.\n        If float, it is calculated as a fraction of the image height.\n        max_width (int, float): Maximum width of the hole.\n        If float, it is calculated as a fraction of the image width.\n        min_holes (int): Minimum number of regions to zero out. If `None`,\n            `min_holes` is be set to `max_holes`. Default: `None`.\n        min_height (int, float): Minimum height of the hole. Default: None. If `None`,\n            `min_height` is set to `max_height`. Default: `None`.\n            If float, it is calculated as a fraction of the image height.\n        min_width (int, float): Minimum width of the hole. If `None`, `min_height` is\n            set to `max_width`. Default: `None`.\n            If float, it is calculated as a fraction of the image width.\n\n        fill_value (int, float, list of int, list of float): value for dropped pixels.\n        mask_fill_value (int, float, list of int, list of float): fill value for dropped pixels\n            in mask. If `None` - mask is not affected. Default: `None`.\n\n    Targets:\n        image, mask, keypoints\n\n    Image types:\n        uint8, float32\n\n    Reference:\n    |  https://arxiv.org/abs/1708.04552\n    |  https://github.com/uoguelph-mlrg/Cutout/blob/master/util/cutout.py\n    |  https://github.com/aleju/imgaug/blob/master/imgaug/augmenters/arithmetic.py\n    "
+    },
+    "Crop": {
+        "args": {
+            "x_min": {
+                "default": "0"
+            },
+            "y_min": {
+                "default": "0"
+            },
+            "x_max": {
+                "default": "1024"
+            },
+            "y_max": {
+                "default": "1024"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "1.0"
+            }
+        },
+        "doc": "Crop region from image.\n\n    Args:\n        x_min (int): Minimum upper left x coordinate.\n        y_min (int): Minimum upper left y coordinate.\n        x_max (int): Maximum lower right x coordinate.\n        y_max (int): Maximum lower right y coordinate.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "CropAndPad": {
+        "args": {
+            "px": {
+                "default": "None"
+            },
+            "percent": {
+                "default": "None"
+            },
+            "pad_mode": {
+                "default": "0"
+            },
+            "pad_cval": {
+                "default": "0"
+            },
+            "pad_cval_mask": {
+                "default": "0"
+            },
+            "keep_size": {
+                "default": "True"
+            },
+            "sample_independently": {
+                "default": "True"
+            },
+            "interpolation": {
+                "default": "1"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "1.0"
+            }
+        },
+        "doc": "Crop and pad images by pixel amounts or fractions of image sizes.\n    Cropping removes pixels at the sides (i.e. extracts a subimage from a given full image).\n    Padding adds pixels to the sides (e.g. black pixels).\n    This transformation will never crop images below a height or width of ``1``.\n\n    Note:\n        This transformation automatically resizes images back to their original size. To deactivate this, add the\n        parameter ``keep_size=False``.\n\n    Args:\n        px (int or tuple):\n            The number of pixels to crop (negative values) or pad (positive values)\n            on each side of the image. Either this or the parameter `percent` may\n            be set, not both at the same time.\n                * If ``None``, then pixel-based cropping/padding will not be used.\n                * If ``int``, then that exact number of pixels will always be cropped/padded.\n                * If a ``tuple`` of two ``int`` s with values ``a`` and ``b``,\n                  then each side will be cropped/padded by a random amount sampled\n                  uniformly per image and side from the interval ``[a, b]``. If\n                  however `sample_independently` is set to ``False``, only one\n                  value will be sampled per image and used for all sides.\n                * If a ``tuple`` of four entries, then the entries represent top,\n                  right, bottom, left. Each entry may be a single ``int`` (always\n                  crop/pad by exactly that value), a ``tuple`` of two ``int`` s\n                  ``a`` and ``b`` (crop/pad by an amount within ``[a, b]``), a\n                  ``list`` of ``int`` s (crop/pad by a random value that is\n                  contained in the ``list``).\n        percent (float or tuple):\n            The number of pixels to crop (negative values) or pad (positive values)\n            on each side of the image given as a *fraction* of the image\n            height/width. E.g. if this is set to ``-0.1``, the transformation will\n            always crop away ``10%`` of the image's height at both the top and the\n            bottom (both ``10%`` each), as well as ``10%`` of the width at the\n            right and left.\n            Expected value range is ``(-1.0, inf)``.\n            Either this or the parameter `px` may be set, not both\n            at the same time.\n                * If ``None``, then fraction-based cropping/padding will not be\n                  used.\n                * If ``float``, then that fraction will always be cropped/padded.\n                * If a ``tuple`` of two ``float`` s with values ``a`` and ``b``,\n                  then each side will be cropped/padded by a random fraction\n                  sampled uniformly per image and side from the interval\n                  ``[a, b]``. If however `sample_independently` is set to\n                  ``False``, only one value will be sampled per image and used for\n                  all sides.\n                * If a ``tuple`` of four entries, then the entries represent top,\n                  right, bottom, left. Each entry may be a single ``float``\n                  (always crop/pad by exactly that percent value), a ``tuple`` of\n                  two ``float`` s ``a`` and ``b`` (crop/pad by a fraction from\n                  ``[a, b]``), a ``list`` of ``float`` s (crop/pad by a random\n                  value that is contained in the list).\n        pad_mode (int): OpenCV border mode.\n        pad_cval (number, Sequence[number]):\n            The constant value to use if the pad mode is ``BORDER_CONSTANT``.\n                * If ``number``, then that value will be used.\n                * If a ``tuple`` of two ``number`` s and at least one of them is\n                  a ``float``, then a random number will be uniformly sampled per\n                  image from the continuous interval ``[a, b]`` and used as the\n                  value. If both ``number`` s are ``int`` s, the interval is\n                  discrete.\n                * If a ``list`` of ``number``, then a random value will be chosen\n                  from the elements of the ``list`` and used as the value.\n        pad_cval_mask (number, Sequence[number]): Same as pad_cval but only for masks.\n        keep_size (bool):\n            After cropping and padding, the result image will usually have a\n            different height/width compared to the original input image. If this\n            parameter is set to ``True``, then the cropped/padded image will be\n            resized to the input image's size, i.e. the output shape is always identical to the input shape.\n        sample_independently (bool):\n            If ``False`` *and* the values for `px`/`percent` result in exactly\n            *one* probability distribution for all image sides, only one single\n            value will be sampled from that probability distribution and used for\n            all sides. I.e. the crop/pad amount then is the same for all sides.\n            If ``True``, four values will be sampled independently, one per side.\n        interpolation (OpenCV flag): flag that is used to specify the interpolation algorithm. Should be one of:\n            cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.\n            Default: cv2.INTER_LINEAR.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        any\n    "
+    },
+    "CropNonEmptyMaskIfExists": {
+        "args": {
+            "height": {
+                "default": ""
+            },
+            "width": {
+                "default": ""
+            },
+            "ignore_values": {
+                "default": "None"
+            },
+            "ignore_channels": {
+                "default": "None"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "1.0"
+            }
+        },
+        "doc": "Crop area with mask if mask is non-empty, else make random crop.\n\n    Args:\n        height (int): vertical size of crop in pixels\n        width (int): horizontal size of crop in pixels\n        ignore_values (list of int): values to ignore in mask, `0` values are always ignored\n            (e.g. if background value is 5 set `ignore_values=[5]` to ignore)\n        ignore_channels (list of int): channels to ignore in mask\n            (e.g. if background is a first channel set `ignore_channels=[0]` to ignore)\n        p (float): probability of applying the transform. Default: 1.0.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "ElasticTransform": {
+        "args": {
+            "alpha": {
+                "default": "1"
+            },
+            "sigma": {
+                "default": "50"
+            },
+            "alpha_affine": {
+                "default": "50"
+            },
+            "interpolation": {
+                "default": "1"
+            },
+            "border_mode": {
+                "default": "4"
+            },
+            "value": {
+                "default": "None"
+            },
+            "mask_value": {
+                "default": "None"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "approximate": {
+                "default": "False"
+            },
+            "same_dxdy": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Elastic deformation of images as described in [Simard2003]_ (with modifications).\n    Based on https://gist.github.com/ernestum/601cdf56d2b424757de5\n\n    .. [Simard2003] Simard, Steinkraus and Platt, \"Best Practices for\n         Convolutional Neural Networks applied to Visual Document Analysis\", in\n         Proc. of the International Conference on Document Analysis and\n         Recognition, 2003.\n\n    Args:\n        alpha (float):\n        sigma (float): Gaussian filter parameter.\n        alpha_affine (float): The range will be (-alpha_affine, alpha_affine)\n        interpolation (OpenCV flag): flag that is used to specify the interpolation algorithm. Should be one of:\n            cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.\n            Default: cv2.INTER_LINEAR.\n        border_mode (OpenCV flag): flag that is used to specify the pixel extrapolation method. Should be one of:\n            cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.\n            Default: cv2.BORDER_REFLECT_101\n        value (int, float, list of ints, list of float): padding value if border_mode is cv2.BORDER_CONSTANT.\n        mask_value (int, float,\n                    list of ints,\n                    list of float): padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.\n        approximate (boolean): Whether to smooth displacement map with fixed kernel size.\n                               Enabling this option gives ~2X speedup on large images.\n        same_dxdy (boolean): Whether to use same random generated shift for x and y.\n                             Enabling this option gives ~2X speedup.\n\n    Targets:\n        image, mask, bbox\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "Flip": {
+        "args": {
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Flip the input either horizontally, vertically or both horizontally and vertically.\n\n    Args:\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "GridDistortion": {
+        "args": {
+            "num_steps": {
+                "default": "5"
+            },
+            "distort_limit": {
+                "default": "0.3"
+            },
+            "interpolation": {
+                "default": "1"
+            },
+            "border_mode": {
+                "default": "4"
+            },
+            "value": {
+                "default": "None"
+            },
+            "mask_value": {
+                "default": "None"
+            },
+            "normalized": {
+                "default": "False"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "\n    Args:\n        num_steps (int): count of grid cells on each side.\n        distort_limit (float, (float, float)): If distort_limit is a single float, the range\n            will be (-distort_limit, distort_limit). Default: (-0.03, 0.03).\n        interpolation (OpenCV flag): flag that is used to specify the interpolation algorithm. Should be one of:\n            cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.\n            Default: cv2.INTER_LINEAR.\n        border_mode (OpenCV flag): flag that is used to specify the pixel extrapolation method. Should be one of:\n            cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.\n            Default: cv2.BORDER_REFLECT_101\n        value (int, float, list of ints, list of float): padding value if border_mode is cv2.BORDER_CONSTANT.\n        mask_value (int, float,\n                    list of ints,\n                    list of float): padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.\n        normalized (bool): if true, distortion will be normalized to do not go outside the image. Default: False\n            See for more information: https://github.com/albumentations-team/albumentations/pull/722\n\n    Targets:\n        image, mask\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "GridDropout": {
+        "args": {
+            "ratio": {
+                "default": "0.5"
+            },
+            "unit_size_min": {
+                "default": "None"
+            },
+            "unit_size_max": {
+                "default": "None"
+            },
+            "holes_number_x": {
+                "default": "None"
+            },
+            "holes_number_y": {
+                "default": "None"
+            },
+            "shift_x": {
+                "default": "0"
+            },
+            "shift_y": {
+                "default": "0"
+            },
+            "random_offset": {
+                "default": "False"
+            },
+            "fill_value": {
+                "default": "0"
+            },
+            "mask_fill_value": {
+                "default": "None"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "GridDropout, drops out rectangular regions of an image and the corresponding mask in a grid fashion.\n\n    Args:\n        ratio (float): the ratio of the mask holes to the unit_size (same for horizontal and vertical directions).\n            Must be between 0 and 1. Default: 0.5.\n        unit_size_min (int): minimum size of the grid unit. Must be between 2 and the image shorter edge.\n            If 'None', holes_number_x and holes_number_y are used to setup the grid. Default: `None`.\n        unit_size_max (int): maximum size of the grid unit. Must be between 2 and the image shorter edge.\n            If 'None', holes_number_x and holes_number_y are used to setup the grid. Default: `None`.\n        holes_number_x (int): the number of grid units in x direction. Must be between 1 and image width//2.\n            If 'None', grid unit width is set as image_width//10. Default: `None`.\n        holes_number_y (int): the number of grid units in y direction. Must be between 1 and image height//2.\n            If `None`, grid unit height is set equal to the grid unit width or image height, whatever is smaller.\n        shift_x (int): offsets of the grid start in x direction from (0,0) coordinate.\n            Clipped between 0 and grid unit_width - hole_width. Default: 0.\n        shift_y (int): offsets of the grid start in y direction from (0,0) coordinate.\n            Clipped between 0 and grid unit height - hole_height. Default: 0.\n        random_offset (boolean): weather to offset the grid randomly between 0 and grid unit size - hole size\n            If 'True', entered shift_x, shift_y are ignored and set randomly. Default: `False`.\n        fill_value (int): value for the dropped pixels. Default = 0\n        mask_fill_value (int): value for the dropped pixels in mask.\n            If `None`, transformation is not applied to the mask. Default: `None`.\n\n    Targets:\n        image, mask\n\n    Image types:\n        uint8, float32\n\n    References:\n        https://arxiv.org/abs/2001.04086\n\n    "
+    },
+    "HorizontalFlip": {
+        "args": {
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Flip the input horizontally around the y-axis.\n\n    Args:\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "Lambda": {
+        "args": {
+            "image": {
+                "default": "None"
+            },
+            "mask": {
+                "default": "None"
+            },
+            "keypoint": {
+                "default": "None"
+            },
+            "bbox": {
+                "default": "None"
+            },
+            "name": {
+                "default": "None"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "1.0"
+            }
+        },
+        "doc": "A flexible transformation class for using user-defined transformation functions per targets.\n    Function signature must include **kwargs to accept optinal arguments like interpolation method, image size, etc:\n\n    Args:\n        image (callable): Image transformation function.\n        mask (callable): Mask transformation function.\n        keypoint (callable): Keypoint transformation function.\n        bbox (callable): BBox transformation function.\n        always_apply (bool): Indicates whether this transformation should be always applied.\n        p (float): probability of applying the transform. Default: 1.0.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        Any\n    "
+    },
+    "LongestMaxSize": {
+        "args": {
+            "max_size": {
+                "default": "1024"
+            },
+            "interpolation": {
+                "default": "1"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "1"
+            }
+        },
+        "doc": "Rescale an image so that maximum side is equal to max_size, keeping the aspect ratio of the initial image.\n\n    Args:\n        max_size (int, list of int): maximum size of the image after the transformation. When using a list, max size\n            will be randomly selected from the values in the list.\n        interpolation (OpenCV flag): interpolation method. Default: cv2.INTER_LINEAR.\n        p (float): probability of applying the transform. Default: 1.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "MaskDropout": {
+        "args": {
+            "max_objects": {
+                "default": "1"
+            },
+            "image_fill_value": {
+                "default": "0"
+            },
+            "mask_fill_value": {
+                "default": "0"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "\n    Image & mask augmentation that zero out mask and image regions corresponding\n    to randomly chosen object instance from mask.\n\n    Mask must be single-channel image, zero values treated as background.\n    Image can be any number of channels.\n\n    Inspired by https://www.kaggle.com/c/severstal-steel-defect-detection/discussion/114254\n\n    Args:\n        max_objects: Maximum number of labels that can be zeroed out. Can be tuple, in this case it's [min, max]\n        image_fill_value: Fill value to use when filling image.\n            Can be 'inpaint' to apply inpaining (works only  for 3-chahnel images)\n        mask_fill_value: Fill value to use when filling mask.\n\n    Targets:\n        image, mask\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "NoOp": {
+        "args": {
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Does nothing"
+    },
+    "OpticalDistortion": {
+        "args": {
+            "distort_limit": {
+                "default": "0.05"
+            },
+            "shift_limit": {
+                "default": "0.05"
+            },
+            "interpolation": {
+                "default": "1"
+            },
+            "border_mode": {
+                "default": "4"
+            },
+            "value": {
+                "default": "None"
+            },
+            "mask_value": {
+                "default": "None"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "\n    Args:\n        distort_limit (float, (float, float)): If distort_limit is a single float, the range\n            will be (-distort_limit, distort_limit). Default: (-0.05, 0.05).\n        shift_limit (float, (float, float))): If shift_limit is a single float, the range\n            will be (-shift_limit, shift_limit). Default: (-0.05, 0.05).\n        interpolation (OpenCV flag): flag that is used to specify the interpolation algorithm. Should be one of:\n            cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.\n            Default: cv2.INTER_LINEAR.\n        border_mode (OpenCV flag): flag that is used to specify the pixel extrapolation method. Should be one of:\n            cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.\n            Default: cv2.BORDER_REFLECT_101\n        value (int, float, list of ints, list of float): padding value if border_mode is cv2.BORDER_CONSTANT.\n        mask_value (int, float,\n                    list of ints,\n                    list of float): padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.\n\n    Targets:\n        image, mask, bbox\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "PadIfNeeded": {
+        "args": {
+            "min_height": {
+                "default": "1024"
+            },
+            "min_width": {
+                "default": "1024"
+            },
+            "pad_height_divisor": {
+                "default": "None"
+            },
+            "pad_width_divisor": {
+                "default": "None"
+            },
+            "position": {
+                "default": "PositionType.CENTER"
+            },
+            "border_mode": {
+                "default": "4"
+            },
+            "value": {
+                "default": "None"
+            },
+            "mask_value": {
+                "default": "None"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "1.0"
+            }
+        },
+        "doc": "Pad side of the image / max if side is less than desired number.\n\n    Args:\n        min_height (int): minimal result image height.\n        min_width (int): minimal result image width.\n        pad_height_divisor (int): if not None, ensures image height is dividable by value of this argument.\n        pad_width_divisor (int): if not None, ensures image width is dividable by value of this argument.\n        position (Union[str, PositionType]): Position of the image. should be PositionType.CENTER or\n            PositionType.TOP_LEFT or PositionType.TOP_RIGHT or PositionType.BOTTOM_LEFT or PositionType.BOTTOM_RIGHT.\n            or PositionType.RANDOM. Default: PositionType.CENTER.\n        border_mode (OpenCV flag): OpenCV border mode.\n        value (int, float, list of int, list of float): padding value if border_mode is cv2.BORDER_CONSTANT.\n        mask_value (int, float,\n                    list of int,\n                    list of float): padding value for mask if border_mode is cv2.BORDER_CONSTANT.\n        p (float): probability of applying the transform. Default: 1.0.\n\n    Targets:\n        image, mask, bbox, keypoints\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "Perspective": {
+        "args": {
+            "scale": {
+                "default": "(0.05, 0.1)"
+            },
+            "keep_size": {
+                "default": "True"
+            },
+            "pad_mode": {
+                "default": "0"
+            },
+            "pad_val": {
+                "default": "0"
+            },
+            "mask_pad_val": {
+                "default": "0"
+            },
+            "fit_output": {
+                "default": "False"
+            },
+            "interpolation": {
+                "default": "1"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Perform a random four point perspective transform of the input.\n\n    Args:\n        scale (float or (float, float)): standard deviation of the normal distributions. These are used to sample\n            the random distances of the subimage's corners from the full image's corners.\n            If scale is a single float value, the range will be (0, scale). Default: (0.05, 0.1).\n        keep_size (bool): Whether to resize image\u2019s back to their original size after applying the perspective\n            transform. If set to False, the resulting images may end up having different shapes\n            and will always be a list, never an array. Default: True\n        pad_mode (OpenCV flag): OpenCV border mode.\n        pad_val (int, float, list of int, list of float): padding value if border_mode is cv2.BORDER_CONSTANT.\n            Default: 0\n        mask_pad_val (int, float, list of int, list of float): padding value for mask\n            if border_mode is cv2.BORDER_CONSTANT. Default: 0\n        fit_output (bool): If True, the image plane size and position will be adjusted to still capture\n            the whole image after perspective transformation. (Followed by image resizing if keep_size is set to True.)\n            Otherwise, parts of the transformed image may be outside of the image plane.\n            This setting should not be set to True when using large scale values as it could lead to very large images.\n            Default: False\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image, mask, keypoints, bboxes\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "PiecewiseAffine": {
+        "args": {
+            "scale": {
+                "default": "(0.03, 0.05)"
+            },
+            "nb_rows": {
+                "default": "4"
+            },
+            "nb_cols": {
+                "default": "4"
+            },
+            "interpolation": {
+                "default": "1"
+            },
+            "mask_interpolation": {
+                "default": "0"
+            },
+            "cval": {
+                "default": "0"
+            },
+            "cval_mask": {
+                "default": "0"
+            },
+            "mode": {
+                "default": "constant"
+            },
+            "absolute_scale": {
+                "default": "False"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "keypoints_threshold": {
+                "default": "0.01"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Apply affine transformations that differ between local neighbourhoods.\n    This augmentation places a regular grid of points on an image and randomly moves the neighbourhood of these point\n    around via affine transformations. This leads to local distortions.\n\n    This is mostly a wrapper around scikit-image's ``PiecewiseAffine``.\n    See also ``Affine`` for a similar technique.\n\n    Note:\n        This augmenter is very slow. Try to use ``ElasticTransformation`` instead, which is at least 10x faster.\n\n    Note:\n        For coordinate-based inputs (keypoints, bounding boxes, polygons, ...),\n        this augmenter still has to perform an image-based augmentation,\n        which will make it significantly slower and not fully correct for such inputs than other transforms.\n\n    Args:\n        scale (float, tuple of float): Each point on the regular grid is moved around via a normal distribution.\n            This scale factor is equivalent to the normal distribution's sigma.\n            Note that the jitter (how far each point is moved in which direction) is multiplied by the height/width of\n            the image if ``absolute_scale=False`` (default), so this scale can be the same for different sized images.\n            Recommended values are in the range ``0.01`` to ``0.05`` (weak to strong augmentations).\n                * If a single ``float``, then that value will always be used as the scale.\n                * If a tuple ``(a, b)`` of ``float`` s, then a random value will\n                  be uniformly sampled per image from the interval ``[a, b]``.\n        nb_rows (int, tuple of int): Number of rows of points that the regular grid should have.\n            Must be at least ``2``. For large images, you might want to pick a higher value than ``4``.\n            You might have to then adjust scale to lower values.\n                * If a single ``int``, then that value will always be used as the number of rows.\n                * If a tuple ``(a, b)``, then a value from the discrete interval\n                  ``[a..b]`` will be uniformly sampled per image.\n        nb_cols (int, tuple of int): Number of columns. Analogous to `nb_rows`.\n        interpolation (int): The order of interpolation. The order has to be in the range 0-5:\n             - 0: Nearest-neighbor\n             - 1: Bi-linear (default)\n             - 2: Bi-quadratic\n             - 3: Bi-cubic\n             - 4: Bi-quartic\n             - 5: Bi-quintic\n        mask_interpolation (int): same as interpolation but for mask.\n        cval (number): The constant value to use when filling in newly created pixels.\n        cval_mask (number): Same as cval but only for masks.\n        mode (str): {'constant', 'edge', 'symmetric', 'reflect', 'wrap'}, optional\n            Points outside the boundaries of the input are filled according\n            to the given mode.  Modes match the behaviour of `numpy.pad`.\n        absolute_scale (bool): Take `scale` as an absolute value rather than a relative value.\n        keypoints_threshold (float): Used as threshold in conversion from distance maps to keypoints.\n            The search for keypoints works by searching for the\n            argmin (non-inverted) or argmax (inverted) in each channel. This\n            parameters contains the maximum (non-inverted) or minimum (inverted) value to accept in order to view a hit\n            as a keypoint. Use ``None`` to use no min/max. Default: 0.01\n\n    Targets:\n        image, mask, keypoints, bboxes\n\n    Image types:\n        uint8, float32\n\n    "
+    },
+    "PixelDropout": {
+        "args": {
+            "dropout_prob": {
+                "default": "0.01"
+            },
+            "per_channel": {
+                "default": "False"
+            },
+            "drop_value": {
+                "default": "0"
+            },
+            "mask_drop_value": {
+                "default": "None"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Set pixels to 0 with some probability.\n\n    Args:\n        dropout_prob (float): pixel drop probability. Default: 0.01\n        per_channel (bool): if set to `True` drop mask will be sampled fo each channel,\n            otherwise the same mask will be sampled for all channels. Default: False\n        drop_value (number or sequence of numbers or None): Value that will be set in dropped place.\n            If set to None value will be sampled randomly, default ranges will be used:\n                - uint8 - [0, 255]\n                - uint16 - [0, 65535]\n                - uint32 - [0, 4294967295]\n                - float, double - [0, 1]\n            Default: 0\n        mask_drop_value (number or sequence of numbers or None): Value that will be set in dropped place in masks.\n            If set to None masks will be unchanged. Default: 0\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image, mask\n    Image types:\n        any\n    "
+    },
+    "RandomCrop": {
+        "args": {
+            "height": {
+                "default": ""
+            },
+            "width": {
+                "default": ""
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "1.0"
+            }
+        },
+        "doc": "Crop a random part of the input.\n\n    Args:\n        height (int): height of the crop.\n        width (int): width of the crop.\n        p (float): probability of applying the transform. Default: 1.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "RandomCropFromBorders": {
+        "args": {
+            "crop_left": {
+                "default": "0.1"
+            },
+            "crop_right": {
+                "default": "0.1"
+            },
+            "crop_top": {
+                "default": "0.1"
+            },
+            "crop_bottom": {
+                "default": "0.1"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "1.0"
+            }
+        },
+        "doc": "Crop bbox from image randomly cut parts from borders without resize at the end\n\n    Args:\n        crop_left (float): single float value in (0.0, 1.0) range. Default 0.1. Image will be randomly cut\n        from left side in range [0, crop_left * width)\n        crop_right (float): single float value in (0.0, 1.0) range. Default 0.1. Image will be randomly cut\n        from right side in range [(1 - crop_right) * width, width)\n        crop_top (float): singlefloat value in (0.0, 1.0) range. Default 0.1. Image will be randomly cut\n        from top side in range [0, crop_top * height)\n        crop_bottom (float): single float value in (0.0, 1.0) range. Default 0.1. Image will be randomly cut\n        from bottom side in range [(1 - crop_bottom) * height, height)\n        p (float): probability of applying the transform. Default: 1.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "RandomCropNearBBox": {
+        "args": {
+            "max_part_shift": {
+                "default": "(0.3, 0.3)"
+            },
+            "cropping_box_key": {
+                "default": "cropping_bbox"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "1.0"
+            }
+        },
+        "doc": "Crop bbox from image with random shift by x,y coordinates\n\n    Args:\n        max_part_shift (float, (float, float)): Max shift in `height` and `width` dimensions relative\n            to `cropping_bbox` dimension.\n            If max_part_shift is a single float, the range will be (max_part_shift, max_part_shift).\n            Default (0.3, 0.3).\n        cropping_box_key (str): Additional target key for cropping box. Default `cropping_bbox`\n        p (float): probability of applying the transform. Default: 1.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        uint8, float32\n\n    Examples:\n        >>> aug = Compose([RandomCropNearBBox(max_part_shift=(0.1, 0.5), cropping_box_key='test_box')],\n        >>>              bbox_params=BboxParams(\"pascal_voc\"))\n        >>> result = aug(image=image, bboxes=bboxes, test_box=[0, 5, 10, 20])\n\n    "
+    },
+    "RandomGridShuffle": {
+        "args": {
+            "grid": {
+                "default": "(3, 3)"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "\n    Random shuffle grid's cells on image.\n\n    Args:\n        grid ((int, int)): size of grid for splitting image.\n\n    Targets:\n        image, mask, keypoints\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "RandomResizedCrop": {
+        "args": {
+            "height": {
+                "default": ""
+            },
+            "width": {
+                "default": ""
+            },
+            "scale": {
+                "default": "(0.08, 1.0)"
+            },
+            "ratio": {
+                "default": "(0.75, 1.3333333333333333)"
+            },
+            "interpolation": {
+                "default": "1"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "1.0"
+            }
+        },
+        "doc": "Torchvision's variant of crop a random part of the input and rescale it to some size.\n\n    Args:\n        height (int): height after crop and resize.\n        width (int): width after crop and resize.\n        scale ((float, float)): range of size of the origin size cropped\n        ratio ((float, float)): range of aspect ratio of the origin aspect ratio cropped\n        interpolation (OpenCV flag): flag that is used to specify the interpolation algorithm. Should be one of:\n            cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.\n            Default: cv2.INTER_LINEAR.\n        p (float): probability of applying the transform. Default: 1.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "RandomRotate90": {
+        "args": {
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Randomly rotate the input by 90 degrees zero or more times.\n\n    Args:\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "RandomScale": {
+        "args": {
+            "scale_limit": {
+                "default": "0.1"
+            },
+            "interpolation": {
+                "default": "1"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Randomly resize the input. Output image size is different from the input image size.\n\n    Args:\n        scale_limit ((float, float) or float): scaling factor range. If scale_limit is a single float value, the\n            range will be (-scale_limit, scale_limit). Note that the scale_limit will be biased by 1.\n            If scale_limit is a tuple, like (low, high), sampling will be done from the range (1 + low, 1 + high).\n            Default: (-0.1, 0.1).\n        interpolation (OpenCV flag): flag that is used to specify the interpolation algorithm. Should be one of:\n            cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.\n            Default: cv2.INTER_LINEAR.\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "RandomSizedBBoxSafeCrop": {
+        "args": {
+            "height": {
+                "default": ""
+            },
+            "width": {
+                "default": ""
+            },
+            "erosion_rate": {
+                "default": "0.0"
+            },
+            "interpolation": {
+                "default": "1"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "1.0"
+            }
+        },
+        "doc": "Crop a random part of the input and rescale it to some size without loss of bboxes.\n    Args:\n        height (int): height after crop and resize.\n        width (int): width after crop and resize.\n        erosion_rate (float): erosion rate applied on input image height before crop.\n        interpolation (OpenCV flag): flag that is used to specify the interpolation algorithm. Should be one of:\n            cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.\n            Default: cv2.INTER_LINEAR.\n        p (float): probability of applying the transform. Default: 1.\n    Targets:\n        image, mask, bboxes\n    Image types:\n        uint8, float32\n    "
+    },
+    "RandomSizedCrop": {
+        "args": {
+            "min_max_height": {
+                "default": ""
+            },
+            "height": {
+                "default": ""
+            },
+            "width": {
+                "default": ""
+            },
+            "w2h_ratio": {
+                "default": "1.0"
+            },
+            "interpolation": {
+                "default": "1"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "1.0"
+            }
+        },
+        "doc": "Crop a random part of the input and rescale it to some size.\n\n    Args:\n        min_max_height ((int, int)): crop size limits.\n        height (int): height after crop and resize.\n        width (int): width after crop and resize.\n        w2h_ratio (float): aspect ratio of crop.\n        interpolation (OpenCV flag): flag that is used to specify the interpolation algorithm. Should be one of:\n            cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.\n            Default: cv2.INTER_LINEAR.\n        p (float): probability of applying the transform. Default: 1.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "Resize": {
+        "args": {
+            "height": {
+                "default": ""
+            },
+            "width": {
+                "default": ""
+            },
+            "interpolation": {
+                "default": "1"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "1"
+            }
+        },
+        "doc": "Resize the input to the given height and width.\n\n    Args:\n        height (int): desired height of the output.\n        width (int): desired width of the output.\n        interpolation (OpenCV flag): flag that is used to specify the interpolation algorithm. Should be one of:\n            cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.\n            Default: cv2.INTER_LINEAR.\n        p (float): probability of applying the transform. Default: 1.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "Rotate": {
+        "args": {
+            "limit": {
+                "default": "90"
+            },
+            "interpolation": {
+                "default": "1"
+            },
+            "border_mode": {
+                "default": "4"
+            },
+            "value": {
+                "default": "None"
+            },
+            "mask_value": {
+                "default": "None"
+            },
+            "rotate_method": {
+                "default": "largest_box"
+            },
+            "crop_border": {
+                "default": "False"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Rotate the input by an angle selected randomly from the uniform distribution.\n\n    Args:\n        limit ((int, int) or int): range from which a random angle is picked. If limit is a single int\n            an angle is picked from (-limit, limit). Default: (-90, 90)\n        interpolation (OpenCV flag): flag that is used to specify the interpolation algorithm. Should be one of:\n            cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.\n            Default: cv2.INTER_LINEAR.\n        border_mode (OpenCV flag): flag that is used to specify the pixel extrapolation method. Should be one of:\n            cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.\n            Default: cv2.BORDER_REFLECT_101\n        value (int, float, list of ints, list of float): padding value if border_mode is cv2.BORDER_CONSTANT.\n        mask_value (int, float,\n                    list of ints,\n                    list of float): padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.\n        rotate_method (str): rotation method used for the bounding boxes. Should be one of \"largest_box\" or \"ellipse\".\n            Default: \"largest_box\"\n        crop_border (bool): If True would make a largest possible crop within rotated image\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "SafeRotate": {
+        "args": {
+            "limit": {
+                "default": "90"
+            },
+            "interpolation": {
+                "default": "1"
+            },
+            "border_mode": {
+                "default": "4"
+            },
+            "value": {
+                "default": "None"
+            },
+            "mask_value": {
+                "default": "None"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Rotate the input inside the input's frame by an angle selected randomly from the uniform distribution.\n\n    The resulting image may have artifacts in it. After rotation, the image may have a different aspect ratio, and\n    after resizing, it returns to its original shape with the original aspect ratio of the image. For these reason we\n    may see some artifacts.\n\n    Args:\n        limit ((int, int) or int): range from which a random angle is picked. If limit is a single int\n            an angle is picked from (-limit, limit). Default: (-90, 90)\n        interpolation (OpenCV flag): flag that is used to specify the interpolation algorithm. Should be one of:\n            cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.\n            Default: cv2.INTER_LINEAR.\n        border_mode (OpenCV flag): flag that is used to specify the pixel extrapolation method. Should be one of:\n            cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.\n            Default: cv2.BORDER_REFLECT_101\n        value (int, float, list of ints, list of float): padding value if border_mode is cv2.BORDER_CONSTANT.\n        mask_value (int, float,\n                    list of ints,\n                    list of float): padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "ShiftScaleRotate": {
+        "args": {
+            "shift_limit": {
+                "default": "0.0625"
+            },
+            "scale_limit": {
+                "default": "0.1"
+            },
+            "rotate_limit": {
+                "default": "45"
+            },
+            "interpolation": {
+                "default": "1"
+            },
+            "border_mode": {
+                "default": "4"
+            },
+            "value": {
+                "default": "None"
+            },
+            "mask_value": {
+                "default": "None"
+            },
+            "shift_limit_x": {
+                "default": "None"
+            },
+            "shift_limit_y": {
+                "default": "None"
+            },
+            "rotate_method": {
+                "default": "largest_box"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Randomly apply affine transforms: translate, scale and rotate the input.\n\n    Args:\n        shift_limit ((float, float) or float): shift factor range for both height and width. If shift_limit\n            is a single float value, the range will be (-shift_limit, shift_limit). Absolute values for lower and\n            upper bounds should lie in range [0, 1]. Default: (-0.0625, 0.0625).\n        scale_limit ((float, float) or float): scaling factor range. If scale_limit is a single float value, the\n            range will be (-scale_limit, scale_limit). Note that the scale_limit will be biased by 1.\n            If scale_limit is a tuple, like (low, high), sampling will be done from the range (1 + low, 1 + high).\n            Default: (-0.1, 0.1).\n        rotate_limit ((int, int) or int): rotation range. If rotate_limit is a single int value, the\n            range will be (-rotate_limit, rotate_limit). Default: (-45, 45).\n        interpolation (OpenCV flag): flag that is used to specify the interpolation algorithm. Should be one of:\n            cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.\n            Default: cv2.INTER_LINEAR.\n        border_mode (OpenCV flag): flag that is used to specify the pixel extrapolation method. Should be one of:\n            cv2.BORDER_CONSTANT, cv2.BORDER_REPLICATE, cv2.BORDER_REFLECT, cv2.BORDER_WRAP, cv2.BORDER_REFLECT_101.\n            Default: cv2.BORDER_REFLECT_101\n        value (int, float, list of int, list of float): padding value if border_mode is cv2.BORDER_CONSTANT.\n        mask_value (int, float,\n                    list of int,\n                    list of float): padding value if border_mode is cv2.BORDER_CONSTANT applied for masks.\n        shift_limit_x ((float, float) or float): shift factor range for width. If it is set then this value\n            instead of shift_limit will be used for shifting width.  If shift_limit_x is a single float value,\n            the range will be (-shift_limit_x, shift_limit_x). Absolute values for lower and upper bounds should lie in\n            the range [0, 1]. Default: None.\n        shift_limit_y ((float, float) or float): shift factor range for height. If it is set then this value\n            instead of shift_limit will be used for shifting height.  If shift_limit_y is a single float value,\n            the range will be (-shift_limit_y, shift_limit_y). Absolute values for lower and upper bounds should lie\n            in the range [0, 1]. Default: None.\n        rotate_method (str): rotation method used for the bounding boxes. Should be one of \"largest_box\" or \"ellipse\".\n            Default: \"largest_box\"\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image, mask, keypoints\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "SmallestMaxSize": {
+        "args": {
+            "max_size": {
+                "default": "1024"
+            },
+            "interpolation": {
+                "default": "1"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "1"
+            }
+        },
+        "doc": "Rescale an image so that minimum side is equal to max_size, keeping the aspect ratio of the initial image.\n\n    Args:\n        max_size (int, list of int): maximum size of smallest side of the image after the transformation. When using a\n            list, max size will be randomly selected from the values in the list.\n        interpolation (OpenCV flag): interpolation method. Default: cv2.INTER_LINEAR.\n        p (float): probability of applying the transform. Default: 1.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "Transpose": {
+        "args": {
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Transpose the input by swapping rows and columns.\n\n    Args:\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "VerticalFlip": {
+        "args": {
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Flip the input vertically around the x-axis.\n\n    Args:\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image, mask, bboxes, keypoints\n\n    Image types:\n        uint8, float32\n    "
+    }
+}

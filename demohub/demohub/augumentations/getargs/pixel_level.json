@@ -1,0 +1,900 @@
+{
+    "AdvancedBlur": {
+        "args": {
+            "blur_limit": {
+                "default": "(3, 7)"
+            },
+            "sigmaX_limit": {
+                "default": "(0.2, 1.0)"
+            },
+            "sigmaY_limit": {
+                "default": "(0.2, 1.0)"
+            },
+            "rotate_limit": {
+                "default": "90"
+            },
+            "beta_limit": {
+                "default": "(0.5, 8.0)"
+            },
+            "noise_limit": {
+                "default": "(0.9, 1.1)"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Blur the input image using a Generalized Normal filter with a randomly selected parameters.\n        This transform also adds multiplicative noise to generated kernel before convolution.\n\n    Args:\n        blur_limit: maximum Gaussian kernel size for blurring the input image.\n            Must be zero or odd and in range [0, inf). If set to 0 it will be computed from sigma\n            as `round(sigma * (3 if img.dtype == np.uint8 else 4) * 2 + 1) + 1`.\n            If set single value `blur_limit` will be in range (0, blur_limit).\n            Default: (3, 7).\n        sigmaX_limit: Gaussian kernel standard deviation. Must be in range [0, inf).\n            If set single value `sigmaX_limit` will be in range (0, sigma_limit).\n            If set to 0 sigma will be computed as `sigma = 0.3*((ksize-1)*0.5 - 1) + 0.8`. Default: 0.\n        sigmaY_limit: Same as `sigmaY_limit` for another dimension.\n        rotate_limit: Range from which a random angle used to rotate Gaussian kernel is picked.\n            If limit is a single int an angle is picked from (-rotate_limit, rotate_limit). Default: (-90, 90).\n        beta_limit: Distribution shape parameter, 1 is the normal distribution. Values below 1.0 make distribution\n            tails heavier than normal, values above 1.0 make it lighter than normal. Default: (0.5, 8.0).\n        noise_limit: Multiplicative factor that control strength of kernel noise. Must be positive and preferably\n            centered around 1.0. If set single value `noise_limit` will be in range (0, noise_limit).\n            Default: (0.75, 1.25).\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Reference:\n        https://arxiv.org/abs/2107.10833\n\n    Targets:\n        image\n    Image types:\n        uint8, float32\n    "
+    },
+    "Blur": {
+        "args": {
+            "blur_limit": {
+                "default": "7"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Blur the input image using a random-sized kernel.\n\n    Args:\n        blur_limit (int, (int, int)): maximum kernel size for blurring the input image.\n            Should be in range [3, inf). Default: (3, 7).\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "CLAHE": {
+        "args": {
+            "clip_limit": {
+                "default": "4.0"
+            },
+            "tile_grid_size": {
+                "default": "(8, 8)"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Apply Contrast Limited Adaptive Histogram Equalization to the input image.\n\n    Args:\n        clip_limit (float or (float, float)): upper threshold value for contrast limiting.\n            If clip_limit is a single float value, the range will be (1, clip_limit). Default: (1, 4).\n        tile_grid_size ((int, int)): size of grid for histogram equalization. Default: (8, 8).\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        uint8\n    "
+    },
+    "ChannelDropout": {
+        "args": {
+            "channel_drop_range": {
+                "default": "(1, 1)"
+            },
+            "fill_value": {
+                "default": "0"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Randomly Drop Channels in the input Image.\n\n    Args:\n        channel_drop_range (int, int): range from which we choose the number of channels to drop.\n        fill_value (int, float): pixel value for the dropped channel.\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, uint16, unit32, float32\n    "
+    },
+    "ChannelShuffle": {
+        "args": {
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Randomly rearrange channels of the input RGB image.\n\n    Args:\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "ColorJitter": {
+        "args": {
+            "brightness": {
+                "default": "0.2"
+            },
+            "contrast": {
+                "default": "0.2"
+            },
+            "saturation": {
+                "default": "0.2"
+            },
+            "hue": {
+                "default": "0.2"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Randomly changes the brightness, contrast, and saturation of an image. Compared to ColorJitter from torchvision,\n    this transform gives a little bit different results because Pillow (used in torchvision) and OpenCV (used in\n    Albumentations) transform an image to HSV format by different formulas. Another difference - Pillow uses uint8\n    overflow, but we use value saturation.\n\n    Args:\n        brightness (float or tuple of float (min, max)): How much to jitter brightness.\n            brightness_factor is chosen uniformly from [max(0, 1 - brightness), 1 + brightness]\n            or the given [min, max]. Should be non negative numbers.\n        contrast (float or tuple of float (min, max)): How much to jitter contrast.\n            contrast_factor is chosen uniformly from [max(0, 1 - contrast), 1 + contrast]\n            or the given [min, max]. Should be non negative numbers.\n        saturation (float or tuple of float (min, max)): How much to jitter saturation.\n            saturation_factor is chosen uniformly from [max(0, 1 - saturation), 1 + saturation]\n            or the given [min, max]. Should be non negative numbers.\n        hue (float or tuple of float (min, max)): How much to jitter hue.\n            hue_factor is chosen uniformly from [-hue, hue] or the given [min, max].\n            Should have 0 <= hue <= 0.5 or -0.5 <= min <= max <= 0.5.\n    "
+    },
+    "Defocus": {
+        "args": {
+            "radius": {
+                "default": "(3, 10)"
+            },
+            "alias_blur": {
+                "default": "(0.1, 0.5)"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "\n    Apply defocus transform. See https://arxiv.org/abs/1903.12261.\n\n    Args:\n        radius ((int, int) or int): range for radius of defocusing.\n            If limit is a single int, the range will be [1, limit]. Default: (3, 10).\n        alias_blur ((float, float) or float): range for alias_blur of defocusing (sigma of gaussian blur).\n            If limit is a single float, the range will be (0, limit). Default: (0.1, 0.5).\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        Any\n    "
+    },
+    "Downscale": {
+        "args": {
+            "scale_min": {
+                "default": "0.25"
+            },
+            "scale_max": {
+                "default": "0.25"
+            },
+            "interpolation": {
+                "default": "None"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Decreases image quality by downscaling and upscaling back.\n\n    Args:\n        scale_min (float): lower bound on the image scale. Should be < 1.\n        scale_max (float):  lower bound on the image scale. Should be .\n        interpolation: cv2 interpolation method. Could be:\n            - single cv2 interpolation flag - selected method will be used for downscale and upscale.\n            - dict(downscale=flag, upscale=flag)\n            - Downscale.Interpolation(downscale=flag, upscale=flag) -\n            Default: Interpolation(downscale=cv2.INTER_NEAREST, upscale=cv2.INTER_NEAREST)\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "Emboss": {
+        "args": {
+            "alpha": {
+                "default": "(0.2, 0.5)"
+            },
+            "strength": {
+                "default": "(0.2, 0.7)"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Emboss the input image and overlays the result with the original image.\n\n    Args:\n        alpha ((float, float)): range to choose the visibility of the embossed image. At 0, only the original image is\n            visible,at 1.0 only its embossed version is visible. Default: (0.2, 0.5).\n        strength ((float, float)): strength range of the embossing. Default: (0.2, 0.7).\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n    "
+    },
+    "Equalize": {
+        "args": {
+            "mode": {
+                "default": "cv"
+            },
+            "by_channels": {
+                "default": "True"
+            },
+            "mask": {
+                "default": "None"
+            },
+            "mask_params": {
+                "default": "()"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Equalize the image histogram.\n\n    Args:\n        mode (str): {'cv', 'pil'}. Use OpenCV or Pillow equalization method.\n        by_channels (bool): If True, use equalization by channels separately,\n            else convert image to YCbCr representation and use equalization by `Y` channel.\n        mask (np.ndarray, callable): If given, only the pixels selected by\n            the mask are included in the analysis. Maybe 1 channel or 3 channel array or callable.\n            Function signature must include `image` argument.\n        mask_params (list of str): Params for mask function.\n\n    Targets:\n        image\n\n    Image types:\n        uint8\n    "
+    },
+    "FDA": {
+        "args": {
+            "reference_images": {
+                "default": ""
+            },
+            "beta_limit": {
+                "default": "0.1"
+            },
+            "read_fn": {
+                "default": "<function read_rgb_image at 0x7efbd451a9e0>"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "\n    Fourier Domain Adaptation from https://github.com/YanchaoYang/FDA\n    Simple \"style transfer\".\n\n    Args:\n        reference_images (List[str] or List(np.ndarray)): List of file paths for reference images\n            or list of reference images.\n        beta_limit (float or tuple of float): coefficient beta from paper. Recommended less 0.3.\n        read_fn (Callable): Used-defined function to read image. Function should get image path and return numpy\n            array of image pixels.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n\n    Reference:\n        https://github.com/YanchaoYang/FDA\n        https://openaccess.thecvf.com/content_CVPR_2020/papers/Yang_FDA_Fourier_Domain_Adaptation_for_Semantic_Segmentation_CVPR_2020_paper.pdf\n\n    Example:\n        >>> import numpy as np\n        >>> import albumentations as A\n        >>> image = np.random.randint(0, 256, [100, 100, 3], dtype=np.uint8)\n        >>> target_image = np.random.randint(0, 256, [100, 100, 3], dtype=np.uint8)\n        >>> aug = A.Compose([A.FDA([target_image], p=1, read_fn=lambda x: x)])\n        >>> result = aug(image=image)\n\n    "
+    },
+    "FancyPCA": {
+        "args": {
+            "alpha": {
+                "default": "0.1"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Augment RGB image using FancyPCA from Krizhevsky's paper\n    \"ImageNet Classification with Deep Convolutional Neural Networks\"\n\n    Args:\n        alpha (float):  how much to perturb/scale the eigen vecs and vals.\n            scale is samples from gaussian distribution (mu=0, sigma=alpha)\n\n    Targets:\n        image\n\n    Image types:\n        3-channel uint8 images only\n\n    Credit:\n        http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf\n        https://deshanadesai.github.io/notes/Fancy-PCA-with-Scikit-Image\n        https://pixelatedbrian.github.io/2018-04-29-fancy_pca/\n    "
+    },
+    "FromFloat": {
+        "args": {
+            "dtype": {
+                "default": "uint16"
+            },
+            "max_value": {
+                "default": "None"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "1.0"
+            }
+        },
+        "doc": "Take an input array where all values should lie in the range [0, 1.0], multiply them by `max_value` and then\n    cast the resulted value to a type specified by `dtype`. If `max_value` is None the transform will try to infer\n    the maximum value for the data type from the `dtype` argument.\n\n    This is the inverse transform for :class:`~albumentations.augmentations.transforms.ToFloat`.\n\n    Args:\n        max_value (float): maximum possible input value. Default: None.\n        dtype (string or numpy data type): data type of the output. See the `'Data types' page from the NumPy docs`_.\n            Default: 'uint16'.\n        p (float): probability of applying the transform. Default: 1.0.\n\n    Targets:\n        image\n\n    Image types:\n        float32\n\n    .. _'Data types' page from the NumPy docs:\n       https://docs.scipy.org/doc/numpy/user/basics.types.html\n    "
+    },
+    "GaussNoise": {
+        "args": {
+            "var_limit": {
+                "default": "(10.0, 50.0)"
+            },
+            "mean": {
+                "default": "0"
+            },
+            "per_channel": {
+                "default": "True"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Apply gaussian noise to the input image.\n\n    Args:\n        var_limit ((float, float) or float): variance range for noise. If var_limit is a single float, the range\n            will be (0, var_limit). Default: (10.0, 50.0).\n        mean (float): mean of the noise. Default: 0\n        per_channel (bool): if set to True, noise will be sampled for each channel independently.\n            Otherwise, the noise will be sampled once for all channels. Default: True\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "GaussianBlur": {
+        "args": {
+            "blur_limit": {
+                "default": "(3, 7)"
+            },
+            "sigma_limit": {
+                "default": "0"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Blur the input image using a Gaussian filter with a random kernel size.\n\n    Args:\n        blur_limit (int, (int, int)): maximum Gaussian kernel size for blurring the input image.\n            Must be zero or odd and in range [0, inf). If set to 0 it will be computed from sigma\n            as `round(sigma * (3 if img.dtype == np.uint8 else 4) * 2 + 1) + 1`.\n            If set single value `blur_limit` will be in range (0, blur_limit).\n            Default: (3, 7).\n        sigma_limit (float, (float, float)): Gaussian kernel standard deviation. Must be in range [0, inf).\n            If set single value `sigma_limit` will be in range (0, sigma_limit).\n            If set to 0 sigma will be computed as `sigma = 0.3*((ksize-1)*0.5 - 1) + 0.8`. Default: 0.\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "GlassBlur": {
+        "args": {
+            "sigma": {
+                "default": "0.7"
+            },
+            "max_delta": {
+                "default": "4"
+            },
+            "iterations": {
+                "default": "2"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "mode": {
+                "default": "fast"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Apply glass noise to the input image.\n\n    Args:\n        sigma (float): standard deviation for Gaussian kernel.\n        max_delta (int): max distance between pixels which are swapped.\n        iterations (int): number of repeats.\n            Should be in range [1, inf). Default: (2).\n        mode (str): mode of computation: fast or exact. Default: \"fast\".\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n\n    Reference:\n    |  https://arxiv.org/abs/1903.12261\n    |  https://github.com/hendrycks/robustness/blob/master/ImageNet-C/create_c/make_imagenet_c.py\n    "
+    },
+    "HistogramMatching": {
+        "args": {
+            "reference_images": {
+                "default": ""
+            },
+            "blend_ratio": {
+                "default": "(0.5, 1.0)"
+            },
+            "read_fn": {
+                "default": "<function read_rgb_image at 0x7efbd451a9e0>"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "\n    Apply histogram matching. It manipulates the pixels of an input image so that its histogram matches\n    the histogram of the reference image. If the images have multiple channels, the matching is done independently\n    for each channel, as long as the number of channels is equal in the input image and the reference.\n\n    Histogram matching can be used as a lightweight normalisation for image processing,\n    such as feature matching, especially in circumstances where the images have been taken from different\n    sources or in different conditions (i.e. lighting).\n\n    See:\n        https://scikit-image.org/docs/dev/auto_examples/color_exposure/plot_histogram_matching.html\n\n    Args:\n        reference_images (List[str] or List(np.ndarray)): List of file paths for reference images\n            or list of reference images.\n        blend_ratio (float, float): Tuple of min and max blend ratio. Matched image will be blended with original\n            with random blend factor for increased diversity of generated images.\n        read_fn (Callable): Used-defined function to read image. Function should get image path and return numpy\n            array of image pixels.\n        p (float): probability of applying the transform. Default: 1.0.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, uint16, float32\n    "
+    },
+    "HueSaturationValue": {
+        "args": {
+            "hue_shift_limit": {
+                "default": "20"
+            },
+            "sat_shift_limit": {
+                "default": "30"
+            },
+            "val_shift_limit": {
+                "default": "20"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Randomly change hue, saturation and value of the input image.\n\n    Args:\n        hue_shift_limit ((int, int) or int): range for changing hue. If hue_shift_limit is a single int, the range\n            will be (-hue_shift_limit, hue_shift_limit). Default: (-20, 20).\n        sat_shift_limit ((int, int) or int): range for changing saturation. If sat_shift_limit is a single int,\n            the range will be (-sat_shift_limit, sat_shift_limit). Default: (-30, 30).\n        val_shift_limit ((int, int) or int): range for changing value. If val_shift_limit is a single int, the range\n            will be (-val_shift_limit, val_shift_limit). Default: (-20, 20).\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "ISONoise": {
+        "args": {
+            "color_shift": {
+                "default": "(0.01, 0.05)"
+            },
+            "intensity": {
+                "default": "(0.1, 0.5)"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "\n    Apply camera sensor noise.\n\n    Args:\n        color_shift (float, float): variance range for color hue change.\n            Measured as a fraction of 360 degree Hue angle in HLS colorspace.\n        intensity ((float, float): Multiplicative factor that control strength\n            of color and luminace noise.\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        uint8\n    "
+    },
+    "ImageCompression": {
+        "args": {
+            "quality_lower": {
+                "default": "99"
+            },
+            "quality_upper": {
+                "default": "100"
+            },
+            "compression_type": {
+                "default": "ImageCompressionType.JPEG"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Decrease Jpeg, WebP compression of an image.\n\n    Args:\n        quality_lower (float): lower bound on the image quality.\n                               Should be in [0, 100] range for jpeg and [1, 100] for webp.\n        quality_upper (float): upper bound on the image quality.\n                               Should be in [0, 100] range for jpeg and [1, 100] for webp.\n        compression_type (ImageCompressionType): should be ImageCompressionType.JPEG or ImageCompressionType.WEBP.\n            Default: ImageCompressionType.JPEG\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "InvertImg": {
+        "args": {
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Invert the input image by subtracting pixel values from 255.\n\n    Args:\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "MedianBlur": {
+        "args": {
+            "blur_limit": {
+                "default": "7"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Blur the input image using a median filter with a random aperture linear size.\n\n    Args:\n        blur_limit (int): maximum aperture linear size for blurring the input image.\n            Must be odd and in range [3, inf). Default: (3, 7).\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "MotionBlur": {
+        "args": {
+            "blur_limit": {
+                "default": "7"
+            },
+            "allow_shifted": {
+                "default": "True"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Apply motion blur to the input image using a random-sized kernel.\n\n    Args:\n        blur_limit (int): maximum kernel size for blurring the input image.\n            Should be in range [3, inf). Default: (3, 7).\n        allow_shifted (bool): if set to true creates non shifted kernels only,\n            otherwise creates randomly shifted kernels. Default: True.\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "MultiplicativeNoise": {
+        "args": {
+            "multiplier": {
+                "default": "(0.9, 1.1)"
+            },
+            "per_channel": {
+                "default": "False"
+            },
+            "elementwise": {
+                "default": "False"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Multiply image to random number or array of numbers.\n\n    Args:\n        multiplier (float or tuple of floats): If single float image will be multiplied to this number.\n            If tuple of float multiplier will be in range `[multiplier[0], multiplier[1])`. Default: (0.9, 1.1).\n        per_channel (bool): If `False`, same values for all channels will be used.\n            If `True` use sample values for each channels. Default False.\n        elementwise (bool): If `False` multiply multiply all pixels in an image with a random value sampled once.\n            If `True` Multiply image pixels with values that are pixelwise randomly sampled. Defaule: False.\n\n    Targets:\n        image\n\n    Image types:\n        Any\n    "
+    },
+    "Normalize": {
+        "args": {
+            "mean": {
+                "default": "(0.485, 0.456, 0.406)"
+            },
+            "std": {
+                "default": "(0.229, 0.224, 0.225)"
+            },
+            "max_pixel_value": {
+                "default": "255.0"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "1.0"
+            }
+        },
+        "doc": "Normalization is applied by the formula: `img = (img - mean * max_pixel_value) / (std * max_pixel_value)`\n\n    Args:\n        mean (float, list of float): mean values\n        std  (float, list of float): std values\n        max_pixel_value (float): maximum possible pixel value\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "PixelDistributionAdaptation": {
+        "args": {
+            "reference_images": {
+                "default": ""
+            },
+            "blend_ratio": {
+                "default": "(0.25, 1.0)"
+            },
+            "read_fn": {
+                "default": "<function read_rgb_image at 0x7efbd451a9e0>"
+            },
+            "transform_type": {
+                "default": "pca"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "\n    Another naive and quick pixel-level domain adaptation. It fits a simple transform (such as PCA, StandardScaler\n    or MinMaxScaler) on both original and reference image, transforms original image with transform trained on this\n    image and then performs inverse transformation using transform fitted on reference image.\n\n    Args:\n        reference_images (List[str] or List(np.ndarray)): List of file paths for reference images\n            or list of reference images.\n        blend_ratio (float, float): Tuple of min and max blend ratio. Matched image will be blended with original\n            with random blend factor for increased diversity of generated images.\n        read_fn (Callable): Used-defined function to read image. Function should get image path and return numpy\n            array of image pixels. Usually it's default `read_rgb_image` when images paths are used as reference,\n            otherwise it could be identity function `lambda x: x` if reference images have been read in advance.\n        transform_type (str): type of transform; \"pca\", \"standard\", \"minmax\" are allowed.\n        p (float): probability of applying the transform. Default: 1.0.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n\n    See also: https://github.com/arsenyinfo/qudida\n    "
+    },
+    "Posterize": {
+        "args": {
+            "num_bits": {
+                "default": "4"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Reduce the number of bits for each color channel.\n\n    Args:\n        num_bits ((int, int) or int,\n                  or list of ints [r, g, b],\n                  or list of ints [[r1, r1], [g1, g2], [b1, b2]]): number of high bits.\n            If num_bits is a single value, the range will be [num_bits, num_bits].\n            Must be in range [0, 8]. Default: 4.\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n    image\n\n    Image types:\n        uint8\n    "
+    },
+    "RGBShift": {
+        "args": {
+            "r_shift_limit": {
+                "default": "20"
+            },
+            "g_shift_limit": {
+                "default": "20"
+            },
+            "b_shift_limit": {
+                "default": "20"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Randomly shift values for each channel of the input RGB image.\n\n    Args:\n        r_shift_limit ((int, int) or int): range for changing values for the red channel. If r_shift_limit is a single\n            int, the range will be (-r_shift_limit, r_shift_limit). Default: (-20, 20).\n        g_shift_limit ((int, int) or int): range for changing values for the green channel. If g_shift_limit is a\n            single int, the range  will be (-g_shift_limit, g_shift_limit). Default: (-20, 20).\n        b_shift_limit ((int, int) or int): range for changing values for the blue channel. If b_shift_limit is a single\n            int, the range will be (-b_shift_limit, b_shift_limit). Default: (-20, 20).\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "RandomBrightnessContrast": {
+        "args": {
+            "brightness_limit": {
+                "default": "0.2"
+            },
+            "contrast_limit": {
+                "default": "0.2"
+            },
+            "brightness_by_max": {
+                "default": "True"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Randomly change brightness and contrast of the input image.\n\n    Args:\n        brightness_limit ((float, float) or float): factor range for changing brightness.\n            If limit is a single float, the range will be (-limit, limit). Default: (-0.2, 0.2).\n        contrast_limit ((float, float) or float): factor range for changing contrast.\n            If limit is a single float, the range will be (-limit, limit). Default: (-0.2, 0.2).\n        brightness_by_max (Boolean): If True adjust contrast by image dtype maximum,\n            else adjust contrast by image mean.\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "RandomFog": {
+        "args": {
+            "fog_coef_lower": {
+                "default": "0.3"
+            },
+            "fog_coef_upper": {
+                "default": "1"
+            },
+            "alpha_coef": {
+                "default": "0.08"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Simulates fog for the image\n\n    From https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library\n\n    Args:\n        fog_coef_lower (float): lower limit for fog intensity coefficient. Should be in [0, 1] range.\n        fog_coef_upper (float): upper limit for fog intensity coefficient. Should be in [0, 1] range.\n        alpha_coef (float): transparency of the fog circles. Should be in [0, 1] range.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "RandomGamma": {
+        "args": {
+            "gamma_limit": {
+                "default": "(80, 120)"
+            },
+            "eps": {
+                "default": "None"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "\n    Args:\n        gamma_limit (float or (float, float)): If gamma_limit is a single float value,\n            the range will be (-gamma_limit, gamma_limit). Default: (80, 120).\n        eps: Deprecated.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "RandomRain": {
+        "args": {
+            "slant_lower": {
+                "default": "-10"
+            },
+            "slant_upper": {
+                "default": "10"
+            },
+            "drop_length": {
+                "default": "20"
+            },
+            "drop_width": {
+                "default": "1"
+            },
+            "drop_color": {
+                "default": "(200, 200, 200)"
+            },
+            "blur_value": {
+                "default": "7"
+            },
+            "brightness_coefficient": {
+                "default": "0.7"
+            },
+            "rain_type": {
+                "default": "None"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Adds rain effects.\n\n    From https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library\n\n    Args:\n        slant_lower: should be in range [-20, 20].\n        slant_upper: should be in range [-20, 20].\n        drop_length: should be in range [0, 100].\n        drop_width: should be in range [1, 5].\n        drop_color (list of (r, g, b)): rain lines color.\n        blur_value (int): rainy view are blurry\n        brightness_coefficient (float): rainy days are usually shady. Should be in range [0, 1].\n        rain_type: One of [None, \"drizzle\", \"heavy\", \"torrential\"]\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "RandomShadow": {
+        "args": {
+            "shadow_roi": {
+                "default": "(0, 0.5, 1, 1)"
+            },
+            "num_shadows_lower": {
+                "default": "1"
+            },
+            "num_shadows_upper": {
+                "default": "2"
+            },
+            "shadow_dimension": {
+                "default": "5"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Simulates shadows for the image\n\n    From https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library\n\n    Args:\n        shadow_roi (float, float, float, float): region of the image where shadows\n            will appear (x_min, y_min, x_max, y_max). All values should be in range [0, 1].\n        num_shadows_lower (int): Lower limit for the possible number of shadows.\n            Should be in range [0, `num_shadows_upper`].\n        num_shadows_upper (int): Lower limit for the possible number of shadows.\n            Should be in range [`num_shadows_lower`, inf].\n        shadow_dimension (int): number of edges in the shadow polygons\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "RandomSnow": {
+        "args": {
+            "snow_point_lower": {
+                "default": "0.1"
+            },
+            "snow_point_upper": {
+                "default": "0.3"
+            },
+            "brightness_coeff": {
+                "default": "2.5"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Bleach out some pixel values simulating snow.\n\n    From https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library\n\n    Args:\n        snow_point_lower (float): lower_bond of the amount of snow. Should be in [0, 1] range\n        snow_point_upper (float): upper_bond of the amount of snow. Should be in [0, 1] range\n        brightness_coeff (float): larger number will lead to a more snow on the image. Should be >= 0\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "RandomSunFlare": {
+        "args": {
+            "flare_roi": {
+                "default": "(0, 0, 1, 0.5)"
+            },
+            "angle_lower": {
+                "default": "0"
+            },
+            "angle_upper": {
+                "default": "1"
+            },
+            "num_flare_circles_lower": {
+                "default": "6"
+            },
+            "num_flare_circles_upper": {
+                "default": "10"
+            },
+            "src_radius": {
+                "default": "400"
+            },
+            "src_color": {
+                "default": "(255, 255, 255)"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Simulates Sun Flare for the image\n\n    From https://github.com/UjjwalSaxena/Automold--Road-Augmentation-Library\n\n    Args:\n        flare_roi (float, float, float, float): region of the image where flare will\n            appear (x_min, y_min, x_max, y_max). All values should be in range [0, 1].\n        angle_lower (float): should be in range [0, `angle_upper`].\n        angle_upper (float): should be in range [`angle_lower`, 1].\n        num_flare_circles_lower (int): lower limit for the number of flare circles.\n            Should be in range [0, `num_flare_circles_upper`].\n        num_flare_circles_upper (int): upper limit for the number of flare circles.\n            Should be in range [`num_flare_circles_lower`, inf].\n        src_radius (int):\n        src_color ((int, int, int)): color of the flare\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "RandomToneCurve": {
+        "args": {
+            "scale": {
+                "default": "0.1"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Randomly change the relationship between bright and dark areas of the image by manipulating its tone curve.\n\n    Args:\n        scale (float): standard deviation of the normal distribution.\n            Used to sample random distances to move two control points that modify the image's curve.\n            Values should be in range [0, 1]. Default: 0.1\n\n\n    Targets:\n        image\n\n    Image types:\n        uint8\n    "
+    },
+    "RingingOvershoot": {
+        "args": {
+            "blur_limit": {
+                "default": "(7, 15)"
+            },
+            "cutoff": {
+                "default": "(0.7853981633974483, 1.5707963267948966)"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Create ringing or overshoot artefacts by conlvolving image with 2D sinc filter.\n\n    Args:\n        blur_limit (int, (int, int)): maximum kernel size for sinc filter.\n            Should be in range [3, inf). Default: (7, 15).\n        cutoff (float, (float, float)): range to choose the cutoff frequency in radians.\n            Should be in range (0, np.pi)\n            Default: (np.pi / 4, np.pi / 2).\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Reference:\n        dsp.stackexchange.com/questions/58301/2-d-circularly-symmetric-low-pass-filter\n        https://arxiv.org/abs/2107.10833\n\n    Targets:\n        image\n    "
+    },
+    "Sharpen": {
+        "args": {
+            "alpha": {
+                "default": "(0.2, 0.5)"
+            },
+            "lightness": {
+                "default": "(0.5, 1.0)"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Sharpen the input image and overlays the result with the original image.\n\n    Args:\n        alpha ((float, float)): range to choose the visibility of the sharpened image. At 0, only the original image is\n            visible, at 1.0 only its sharpened version is visible. Default: (0.2, 0.5).\n        lightness ((float, float)): range to choose the lightness of the sharpened image. Default: (0.5, 1.0).\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n    "
+    },
+    "Solarize": {
+        "args": {
+            "threshold": {
+                "default": "128"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Invert all pixel values above a threshold.\n\n    Args:\n        threshold ((int, int) or int, or (float, float) or float): range for solarizing threshold.\n            If threshold is a single value, the range will be [threshold, threshold]. Default: 128.\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        any\n    "
+    },
+    "Spatter": {
+        "args": {
+            "mean": {
+                "default": "0.65"
+            },
+            "std": {
+                "default": "0.3"
+            },
+            "gauss_sigma": {
+                "default": "2"
+            },
+            "cutout_threshold": {
+                "default": "0.68"
+            },
+            "intensity": {
+                "default": "0.6"
+            },
+            "mode": {
+                "default": "rain"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "\n    Apply spatter transform. It simulates corruption which can occlude a lens in the form of rain or mud.\n\n    Args:\n        mean (float, or tuple of floats): Mean value of normal distribution for generating liquid layer.\n            If single float it will be used as mean.\n            If tuple of float mean will be sampled from range `[mean[0], mean[1])`. Default: (0.65).\n        std (float, or tuple of floats): Standard deviation value of normal distribution for generating liquid layer.\n            If single float it will be used as std.\n            If tuple of float std will be sampled from range `[std[0], std[1])`. Default: (0.3).\n        gauss_sigma (float, or tuple of floats): Sigma value for gaussian filtering of liquid layer.\n            If single float it will be used as gauss_sigma.\n            If tuple of float gauss_sigma will be sampled from range `[sigma[0], sigma[1])`. Default: (2).\n        cutout_threshold (float, or tuple of floats): Threshold for filtering liqued layer\n            (determines number of drops). If single float it will used as cutout_threshold.\n            If tuple of float cutout_threshold will be sampled from range `[cutout_threshold[0], cutout_threshold[1])`.\n            Default: (0.68).\n        intensity (float, or tuple of floats): Intensity of corruption.\n            If single float it will be used as intensity.\n            If tuple of float intensity will be sampled from range `[intensity[0], intensity[1])`. Default: (0.6).\n        mode (string, or list of strings): Type of corruption. Currently, supported options are 'rain' and 'mud'.\n             If list is provided type of corruption will be sampled list. Default: (\"rain\").\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n\n    Reference:\n    |  https://arxiv.org/pdf/1903.12261.pdf\n    |  https://github.com/hendrycks/robustness/blob/master/ImageNet-C/create_c/make_imagenet_c.py\n    "
+    },
+    "Superpixels": {
+        "args": {
+            "p_replace": {
+                "default": "0.1"
+            },
+            "n_segments": {
+                "default": "100"
+            },
+            "max_size": {
+                "default": "128"
+            },
+            "interpolation": {
+                "default": "1"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Transform images partially/completely to their superpixel representation.\n    This implementation uses skimage's version of the SLIC algorithm.\n\n    Args:\n        p_replace (float or tuple of float): Defines for any segment the probability that the pixels within that\n            segment are replaced by their average color (otherwise, the pixels are not changed).\n            Examples:\n                * A probability of ``0.0`` would mean, that the pixels in no\n                  segment are replaced by their average color (image is not\n                  changed at all).\n                * A probability of ``0.5`` would mean, that around half of all\n                  segments are replaced by their average color.\n                * A probability of ``1.0`` would mean, that all segments are\n                  replaced by their average color (resulting in a voronoi\n                  image).\n            Behaviour based on chosen data types for this parameter:\n                * If a ``float``, then that ``flat`` will always be used.\n                * If ``tuple`` ``(a, b)``, then a random probability will be\n                  sampled from the interval ``[a, b]`` per image.\n        n_segments (int, or tuple of int): Rough target number of how many superpixels to generate (the algorithm\n            may deviate from this number). Lower value will lead to coarser superpixels.\n            Higher values are computationally more intensive and will hence lead to a slowdown\n            * If a single ``int``, then that value will always be used as the\n              number of segments.\n            * If a ``tuple`` ``(a, b)``, then a value from the discrete\n              interval ``[a..b]`` will be sampled per image.\n        max_size (int or None): Maximum image size at which the augmentation is performed.\n            If the width or height of an image exceeds this value, it will be\n            downscaled before the augmentation so that the longest side matches `max_size`.\n            This is done to speed up the process. The final output image has the same size as the input image.\n            Note that in case `p_replace` is below ``1.0``,\n            the down-/upscaling will affect the not-replaced pixels too.\n            Use ``None`` to apply no down-/upscaling.\n        interpolation (OpenCV flag): flag that is used to specify the interpolation algorithm. Should be one of:\n            cv2.INTER_NEAREST, cv2.INTER_LINEAR, cv2.INTER_CUBIC, cv2.INTER_AREA, cv2.INTER_LANCZOS4.\n            Default: cv2.INTER_LINEAR.\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n    "
+    },
+    "TemplateTransform": {
+        "args": {
+            "templates": {
+                "default": ""
+            },
+            "img_weight": {
+                "default": "0.5"
+            },
+            "template_weight": {
+                "default": "0.5"
+            },
+            "template_transform": {
+                "default": "None"
+            },
+            "name": {
+                "default": "None"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "\n    Apply blending of input image with specified templates\n    Args:\n        templates (numpy array or list of numpy arrays): Images as template for transform.\n        img_weight ((float, float) or float): If single float will be used as weight for input image.\n            If tuple of float img_weight will be in range `[img_weight[0], img_weight[1])`. Default: 0.5.\n        template_weight ((float, float) or float): If single float will be used as weight for template.\n            If tuple of float template_weight will be in range `[template_weight[0], template_weight[1])`.\n            Default: 0.5.\n        template_transform: transformation object which could be applied to template,\n            must produce template the same size as input image.\n        name (string): (Optional) Name of transform, used only for deserialization.\n        p (float): probability of applying the transform. Default: 0.5.\n    Targets:\n        image\n    Image types:\n        uint8, float32\n    "
+    },
+    "ToFloat": {
+        "args": {
+            "max_value": {
+                "default": "None"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "1.0"
+            }
+        },
+        "doc": "Divide pixel values by `max_value` to get a float32 output array where all values lie in the range [0, 1.0].\n    If `max_value` is None the transform will try to infer the maximum value by inspecting the data type of the input\n    image.\n\n    See Also:\n        :class:`~albumentations.augmentations.transforms.FromFloat`\n\n    Args:\n        max_value (float): maximum possible input value. Default: None.\n        p (float): probability of applying the transform. Default: 1.0.\n\n    Targets:\n        image\n\n    Image types:\n        any type\n\n    "
+    },
+    "ToGray": {
+        "args": {
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Convert the input RGB image to grayscale. If the mean pixel value for the resulting image is greater\n    than 127, invert the resulting grayscale image.\n\n    Args:\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "ToSepia": {
+        "args": {
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "Applies sepia filter to the input RGB image\n\n    Args:\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n    "
+    },
+    "UnsharpMask": {
+        "args": {
+            "blur_limit": {
+                "default": "(3, 7)"
+            },
+            "sigma_limit": {
+                "default": "0.0"
+            },
+            "alpha": {
+                "default": "(0.2, 0.5)"
+            },
+            "threshold": {
+                "default": "10"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "\n    Sharpen the input image using Unsharp Masking processing and overlays the result with the original image.\n\n    Args:\n        blur_limit (int, (int, int)): maximum Gaussian kernel size for blurring the input image.\n            Must be zero or odd and in range [0, inf). If set to 0 it will be computed from sigma\n            as `round(sigma * (3 if img.dtype == np.uint8 else 4) * 2 + 1) + 1`.\n            If set single value `blur_limit` will be in range (0, blur_limit).\n            Default: (3, 7).\n        sigma_limit (float, (float, float)): Gaussian kernel standard deviation. Must be in range [0, inf).\n            If set single value `sigma_limit` will be in range (0, sigma_limit).\n            If set to 0 sigma will be computed as `sigma = 0.3*((ksize-1)*0.5 - 1) + 0.8`. Default: 0.\n        alpha (float, (float, float)): range to choose the visibility of the sharpened image.\n            At 0, only the original image is visible, at 1.0 only its sharpened version is visible.\n            Default: (0.2, 0.5).\n        threshold (int): Value to limit sharpening only for areas with high pixel difference between original image\n            and it's smoothed version. Higher threshold means less sharpening on flat areas.\n            Must be in range [0, 255]. Default: 10.\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Reference:\n        arxiv.org/pdf/2107.10833.pdf\n\n    Targets:\n        image\n    "
+    },
+    "ZoomBlur": {
+        "args": {
+            "max_factor": {
+                "default": "1.31"
+            },
+            "step_factor": {
+                "default": "(0.01, 0.03)"
+            },
+            "always_apply": {
+                "default": "False"
+            },
+            "p": {
+                "default": "0.5"
+            }
+        },
+        "doc": "\n    Apply zoom blur transform. See https://arxiv.org/abs/1903.12261.\n\n    Args:\n        max_factor ((float, float) or float): range for max factor for blurring.\n            If max_factor is a single float, the range will be (1, limit). Default: (1, 1.31).\n            All max_factor values should be larger than 1.\n        step_factor ((float, float) or float): If single float will be used as step parameter for np.arange.\n            If tuple of float step_factor will be in range `[step_factor[0], step_factor[1])`. Default: (0.01, 0.03).\n            All step_factor values should be positive.\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        Any\n    "
+    }
+}

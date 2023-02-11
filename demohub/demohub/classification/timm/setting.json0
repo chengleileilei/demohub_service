@@ -1,0 +1,41 @@
+{
+    "name": {
+        "en": "timm",
+        "cn": "timm"
+    },
+    "introduction": {
+        "tittle": {
+            "en": "INTRODUCTION",
+            "cn": "介绍"
+        },
+        "text": {
+            "en": [
+                "PyTorch Image Models (timm) is a collection of image models, layers, utilities, optimizers, schedulers, data-loaders / augmentations, and reference training / validation scripts that aim to pull together a wide variety of SOTA models with ability to reproduce ImageNet training results."
+            ],
+            "cn": [
+                "PyTorch 图像模型 (timm) 是图像模型、层、实用程序、优化器、调度程序、数据加载器/增强和参考训练/验证脚本的集合，旨在将各种 SOTA 模型组合在一起，并能够重现 ImageNet 训练结果。"
+            ]
+        },
+        "link": {
+            "text": {
+                "en": "https://github.com/rwightman/pytorch-image-models",
+                "cn": "https://github.com/rwightman/pytorch-image-models"
+            },
+            "url": "https://github.com/rwightman/pytorch-image-models#introduction"
+        }
+    },
+    "input_image_name": "demo.jpg",
+    "output_image_name": "demo.jpg",
+    "likes": 2,
+    "pageviews": 53,
+    "author": "admin",
+    "conda_env": "demohub.timm",
+    "show_images": [
+        "../../../../web/images/demo.jpg",
+        "../../../../web/images/airplane.jpg",
+        "../../../../web/images/bird.jpg",
+        "../../../../web/images/cat.jpg",
+        "../../../../web/images/chair.jpg",
+        "../../../../web/images/deer.jpg"
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "name": {
+        "en": "Alexnet",
+        "cn": "Alexnet(中)"
+    },
+    "introduction": {
+        "tittle": {
+            "en": "INTRODUCTION",
+            "cn": "介绍"
+        },
+        "text": {
+            "en": [
+                "HELLO,ALEXNET"
+            ],
+            "cn": [
+                "这是中文。"
+            ]
+        },
+        "link": {
+            "text": {
+                "en": "https://mmcheng.net",
+                "cn": "https://mmcheng.net"
+            },
+            "url": "https://mmcheng.net"
+        }
+    },
+    "input_image_name": "demo.jpg",
+    "output_image_name": "demo.jpg",
+    "likes": 409,
+    "pageviews": 809,
+    "author": "DemoHub",
+    "conda_env": "classification",
+    "show_images": [
+        "../../../../web/images/demo.jpg",
+        "./demo.jpg",
+        "../../../../web/images/bird.jpg",
+        "../../../../web/images/cat.jpg",
+        "../../../../web/images/chair.jpg",
+        "../../../../web/images/deer.jpg"
+    ]
+}
