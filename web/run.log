@@ -8,824 +8,903 @@
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 105-543-395
-172.27.239.155 - - [11/Feb/2023 03:38:43] "GET /pageviews?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:43] "GET /absimage?path=/root/demohub/web/images/demo.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:43] "GET /absimage?path=/root/demohub/web/images/bird.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:43] "GET /absimage?path=/root/demohub/web/images/airplane.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:43] "GET /absimage?path=/root/demohub/web/images/cat.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:43] "GET /absimage?path=/root/demohub/web/images/deer.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:43] "GET /data HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:43] "GET /absimage?path=/root/demohub/web/images/chair.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:44] "GET /data HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:44] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demo.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:44] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:44] "GET /absimage?path=/root/demohub/demohub/demohub/classification/alexnet/demo.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:44] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:44] "GET /absimage?path=/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demo.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/classification/regnet/demo.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/classification/resnet/demo.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/classification/resnext/demo.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/canny/demo.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/equalize_hist/demo.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/yolov5/demo.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ann/demo.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:45] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:47] "GET /pageviews?type=segmentation&model=mm_ann HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:48] "OPTIONS /submit HTTP/1.1" 200 -
-/opt/conda/envs/demohub.mmsegmentation/lib/python3.7/site-packages/mmcv/__init__.py:21: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
-  'On January 1, 2023, MMCV will release v2.0.0, in which it will remove '
-/opt/conda/envs/demohub.mmsegmentation/lib/python3.7/site-packages/mmseg/models/losses/cross_entropy_loss.py:236: UserWarning: Default ``avg_non_ignore`` is False, if you would like to ignore the certain label and average loss over non-ignore labels, which is the same with PyTorch official cross_entropy, set ``avg_non_ignore=True``.
-  'Default ``avg_non_ignore`` is False, if you would like to '
-/opt/conda/envs/demohub.mmsegmentation/lib/python3.7/site-packages/mmseg/models/segmentors/base.py:289: UserWarning: show==False and out_file is not specified, only result image will be returned
-  warnings.warn('show==False and out_file is not specified, only '
-172.27.239.155 - - [11/Feb/2023 03:38:59] "POST /submit HTTP/1.1" 200 -
-172.27.239.155 - - [11/Feb/2023 03:38:59] "GET /absimage?path=/root/demohub/web/images/ann_cat.jpg HTTP/1.1" 200 -
-193.32.162.159 - - [11/Feb/2023 03:39:11] "[35m[1mGET / HTTP/1.1[0m" 500 -
-Traceback (most recent call last):
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
-    return self.wsgi_app(environ, start_response)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
-    response = self.handle_exception(e)
-               ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/demohub/web/app.py", line 39, in getIndexe
-    return render_template('dist/index.html')
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
-    source, filename, uptodate = self.get_source(environment, name)
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
-    return self._get_source_fast(environment, template)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: dist/index.html
-147.78.103.174 - - [11/Feb/2023 04:54:20] "[35m[1mGET / HTTP/1.1[0m" 500 -
-Traceback (most recent call last):
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
-    return self.wsgi_app(environ, start_response)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
-    response = self.handle_exception(e)
-               ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/demohub/web/app.py", line 39, in getIndexe
-    return render_template('dist/index.html')
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
-    source, filename, uptodate = self.get_source(environment, name)
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
-    return self._get_source_fast(environment, template)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: dist/index.html
-147.78.103.174 - - [11/Feb/2023 04:54:21] "[35m[1mGET / HTTP/1.1[0m" 500 -
-Traceback (most recent call last):
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
-    return self.wsgi_app(environ, start_response)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
-    response = self.handle_exception(e)
-               ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/demohub/web/app.py", line 39, in getIndexe
-    return render_template('dist/index.html')
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
-    source, filename, uptodate = self.get_source(environment, name)
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
-    return self._get_source_fast(environment, template)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: dist/index.html
-147.78.103.174 - - [11/Feb/2023 04:54:22] "[33mGET /wp-includes/wlwmanifest.xml HTTP/1.1[0m" 404 -
-147.78.103.174 - - [11/Feb/2023 04:54:22] "[33mGET /xmlrpc.php?rsd HTTP/1.1[0m" 404 -
-147.78.103.174 - - [11/Feb/2023 04:54:23] "[35m[1mGET / HTTP/1.1[0m" 500 -
-Traceback (most recent call last):
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
-    return self.wsgi_app(environ, start_response)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
-    response = self.handle_exception(e)
-               ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/demohub/web/app.py", line 39, in getIndexe
-    return render_template('dist/index.html')
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
-    source, filename, uptodate = self.get_source(environment, name)
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
-    return self._get_source_fast(environment, template)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: dist/index.html
-147.78.103.174 - - [11/Feb/2023 04:54:24] "[33mGET /blog/wp-includes/wlwmanifest.xml HTTP/1.1[0m" 404 -
-147.78.103.174 - - [11/Feb/2023 04:54:25] "[33mGET /web/wp-includes/wlwmanifest.xml HTTP/1.1[0m" 404 -
-147.78.103.174 - - [11/Feb/2023 04:54:26] "[33mGET /wordpress/wp-includes/wlwmanifest.xml HTTP/1.1[0m" 404 -
-147.78.103.174 - - [11/Feb/2023 04:54:27] "[33mGET /website/wp-includes/wlwmanifest.xml HTTP/1.1[0m" 404 -
-147.78.103.174 - - [11/Feb/2023 04:54:27] "[33mGET /wp/wp-includes/wlwmanifest.xml HTTP/1.1[0m" 404 -
-147.78.103.174 - - [11/Feb/2023 04:54:28] "[33mGET /news/wp-includes/wlwmanifest.xml HTTP/1.1[0m" 404 -
-147.78.103.174 - - [11/Feb/2023 04:54:28] "[33mGET /2018/wp-includes/wlwmanifest.xml HTTP/1.1[0m" 404 -
-147.78.103.174 - - [11/Feb/2023 04:54:29] "[33mGET /2019/wp-includes/wlwmanifest.xml HTTP/1.1[0m" 404 -
-147.78.103.174 - - [11/Feb/2023 04:54:30] "[33mGET /shop/wp-includes/wlwmanifest.xml HTTP/1.1[0m" 404 -
-147.78.103.174 - - [11/Feb/2023 04:54:31] "[33mGET /wp1/wp-includes/wlwmanifest.xml HTTP/1.1[0m" 404 -
-147.78.103.174 - - [11/Feb/2023 04:54:31] "[33mGET /test/wp-includes/wlwmanifest.xml HTTP/1.1[0m" 404 -
-147.78.103.174 - - [11/Feb/2023 04:54:32] "[33mGET /media/wp-includes/wlwmanifest.xml HTTP/1.1[0m" 404 -
-147.78.103.174 - - [11/Feb/2023 04:54:33] "[33mGET /wp2/wp-includes/wlwmanifest.xml HTTP/1.1[0m" 404 -
-147.78.103.174 - - [11/Feb/2023 04:54:33] "[33mGET /site/wp-includes/wlwmanifest.xml HTTP/1.1[0m" 404 -
-147.78.103.174 - - [11/Feb/2023 04:54:34] "[33mGET /cms/wp-includes/wlwmanifest.xml HTTP/1.1[0m" 404 -
-147.78.103.174 - - [11/Feb/2023 04:54:35] "[33mGET /sito/wp-includes/wlwmanifest.xml HTTP/1.1[0m" 404 -
-45.131.108.108 - - [11/Feb/2023 04:57:17] "[33mGET /users/sign_in HTTP/1.0[0m" 404 -
-183.136.225.32 - - [11/Feb/2023 05:56:57] "[35m[1mGET / HTTP/1.1[0m" 500 -
-Traceback (most recent call last):
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
-    return self.wsgi_app(environ, start_response)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
-    response = self.handle_exception(e)
-               ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/demohub/web/app.py", line 39, in getIndexe
-    return render_template('dist/index.html')
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
-    source, filename, uptodate = self.get_source(environment, name)
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
-    return self._get_source_fast(environment, template)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: dist/index.html
-167.172.175.228 - - [11/Feb/2023 05:58:52] "[35m[1mGET / HTTP/1.1[0m" 500 -
-Traceback (most recent call last):
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
-    return self.wsgi_app(environ, start_response)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
-    response = self.handle_exception(e)
-               ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/demohub/web/app.py", line 39, in getIndexe
-    return render_template('dist/index.html')
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
-    source, filename, uptodate = self.get_source(environment, name)
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
-    return self._get_source_fast(environment, template)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: dist/index.html
-183.136.225.32 - - [11/Feb/2023 06:03:19] "[35m[1mGET /?__debugger__=yes&amp;cmd=resource&amp;f=console.png HTTP/1.1[0m" 500 -
-Traceback (most recent call last):
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
-    return self.wsgi_app(environ, start_response)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
-    response = self.handle_exception(e)
-               ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/demohub/web/app.py", line 39, in getIndexe
-    return render_template('dist/index.html')
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
-    source, filename, uptodate = self.get_source(environment, name)
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
-    return self._get_source_fast(environment, template)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: dist/index.html
-183.136.225.32 - - [11/Feb/2023 06:03:20] "[35m[1mGET /?__debugger__=yes&amp;cmd=resource&amp;f=console.png HTTP/1.1[0m" 500 -
-Traceback (most recent call last):
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
-    return self.wsgi_app(environ, start_response)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
-    response = self.handle_exception(e)
-               ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/demohub/web/app.py", line 39, in getIndexe
-    return render_template('dist/index.html')
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
-    source, filename, uptodate = self.get_source(environment, name)
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
-    return self._get_source_fast(environment, template)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: dist/index.html
-183.136.225.32 - - [11/Feb/2023 06:03:20] "[35m[1mGET / HTTP/1.1[0m" 500 -
-Traceback (most recent call last):
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
-    return self.wsgi_app(environ, start_response)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
-    response = self.handle_exception(e)
-               ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/demohub/web/app.py", line 39, in getIndexe
-    return render_template('dist/index.html')
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
-    source, filename, uptodate = self.get_source(environment, name)
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
-    return self._get_source_fast(environment, template)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: dist/index.html
-183.136.225.32 - - [11/Feb/2023 06:03:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-183.136.225.32 - - [11/Feb/2023 06:03:20] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
-183.136.225.32 - - [11/Feb/2023 06:03:27] "[35m[1mGET /?__debugger__=yes&amp;cmd=resource&amp;f=debugger.js HTTP/1.1[0m" 500 -
-Traceback (most recent call last):
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
-    return self.wsgi_app(environ, start_response)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
-    response = self.handle_exception(e)
-               ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/demohub/web/app.py", line 39, in getIndexe
-    return render_template('dist/index.html')
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
-    source, filename, uptodate = self.get_source(environment, name)
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
-    return self._get_source_fast(environment, template)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: dist/index.html
-192.241.197.61 - - [11/Feb/2023 06:10:04] "[35m[1mGET / HTTP/1.1[0m" 500 -
-Traceback (most recent call last):
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
-    return self.wsgi_app(environ, start_response)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
-    response = self.handle_exception(e)
-               ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/demohub/web/app.py", line 39, in getIndexe
-    return render_template('dist/index.html')
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
-    source, filename, uptodate = self.get_source(environment, name)
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
-    return self._get_source_fast(environment, template)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: dist/index.html
-193.32.162.159 - - [11/Feb/2023 06:15:58] "[35m[1mGET / HTTP/1.1[0m" 500 -
-Traceback (most recent call last):
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
-    return self.wsgi_app(environ, start_response)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
-    response = self.handle_exception(e)
-               ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/demohub/web/app.py", line 39, in getIndexe
-    return render_template('dist/index.html')
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
-    source, filename, uptodate = self.get_source(environment, name)
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
-    return self._get_source_fast(environment, template)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: dist/index.html
-162.142.125.220 - - [11/Feb/2023 06:54:09] "[35m[1mGET / HTTP/1.1[0m" 500 -
-Traceback (most recent call last):
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
-    return self.wsgi_app(environ, start_response)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
-    response = self.handle_exception(e)
-               ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/demohub/web/app.py", line 39, in getIndexe
-    return render_template('dist/index.html')
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
-    source, filename, uptodate = self.get_source(environment, name)
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
-    return self._get_source_fast(environment, template)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: dist/index.html
-162.142.125.220 - - [11/Feb/2023 06:54:10] "[35m[1mGET / HTTP/1.1[0m" 500 -
-Traceback (most recent call last):
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
-    return self.wsgi_app(environ, start_response)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
-    response = self.handle_exception(e)
-               ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/demohub/web/app.py", line 39, in getIndexe
-    return render_template('dist/index.html')
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
-    source, filename, uptodate = self.get_source(environment, name)
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
-    return self._get_source_fast(environment, template)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: dist/index.html
-162.142.125.220 - - [11/Feb/2023 06:54:10] code 505, message Invalid HTTP version (2.0)
-162.142.125.220 - - [11/Feb/2023 06:54:10] "[35m[1mPRI * HTTP/2.0[0m" 505 -
-185.246.220.98 - - [11/Feb/2023 07:06:11] "[35m[1mGET / HTTP/1.1[0m" 500 -
-Traceback (most recent call last):
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2548, in __call__
-    return self.wsgi_app(environ, start_response)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
-    response = self.handle_exception(e)
-               ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask_cors/extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/app.py", line 1796, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/demohub/web/app.py", line 39, in getIndexe
-    return render_template('dist/index.html')
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
-    template = app.jinja_env.get_or_select_template(template_name_or_list)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
-    return self._load_template(name, globals)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
-    source, filename, uptodate = self.get_source(environment, name)
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
-    return self._get_source_fast(environment, template)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/envs/web_flask/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: dist/index.html
+172.27.239.155 - - [11/Feb/2023 07:54:19] "GET / HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:19] "[36mGET /static/css/app.027f53f817d52007523c1deb4097ebc3.css HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:19] "[36mGET /static/js/manifest.b884e26532d93cfcc394.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:19] "[36mGET /static/js/app.5971cc401c3c21f0fa5d.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:19] "[36mGET /static/js/vendor.7bb2cdc399aff5733fdf.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:19] "[36mGET /static/img/Bg@2x.621bedb.png HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:19] "GET /pageviews?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:19] "[36mGET /static/js/0.6d9ed0b0c734cbd37019.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:19] "[36mGET /static/js/1.505815e7dc48bdc40668.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:19] "GET /data HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:19] "GET /absimage?path=/root/demohub/web/images/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:19] "GET /absimage?path=/root/demohub/web/images/airplane.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:19] "GET /absimage?path=/root/demohub/web/images/bird.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:19] "GET /absimage?path=/root/demohub/web/images/cat.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:19] "GET /absimage?path=/root/demohub/web/images/chair.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:19] "[36mGET /static/fonts/element-icons.535877f.woff HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:19] "GET /absimage?path=/root/demohub/web/images/deer.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:19] "GET /static/favicon.ico HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:20] "GET / HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:20] "[36mGET /static/css/app.027f53f817d52007523c1deb4097ebc3.css HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:20] "[36mGET /static/js/manifest.b884e26532d93cfcc394.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:20] "[36mGET /static/js/vendor.7bb2cdc399aff5733fdf.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:20] "[36mGET /static/js/app.5971cc401c3c21f0fa5d.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:20] "[36mGET /static/img/Bg@2x.621bedb.png HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:20] "GET /data HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:20] "GET /pageviews?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:20] "[36mGET /static/js/0.6d9ed0b0c734cbd37019.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:20] "[36mGET /static/js/1.505815e7dc48bdc40668.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:20] "GET /absimage?path=/root/demohub/web/images/airplane.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:20] "GET /absimage?path=/root/demohub/web/images/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:20] "GET /absimage?path=/root/demohub/web/images/bird.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:20] "GET /absimage?path=/root/demohub/web/images/cat.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:20] "GET /absimage?path=/root/demohub/web/images/chair.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:20] "[36mGET /static/fonts/element-icons.535877f.woff HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:20] "GET /absimage?path=/root/demohub/web/images/deer.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:20] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "GET / HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "[36mGET /static/css/app.027f53f817d52007523c1deb4097ebc3.css HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "[36mGET /static/js/manifest.b884e26532d93cfcc394.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "[36mGET /static/js/vendor.7bb2cdc399aff5733fdf.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "[36mGET /static/js/app.5971cc401c3c21f0fa5d.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "[36mGET /static/img/Bg@2x.621bedb.png HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "GET /pageviews?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "[36mGET /static/js/1.505815e7dc48bdc40668.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "[36mGET /static/js/0.6d9ed0b0c734cbd37019.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "GET /data HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "GET /absimage?path=/root/demohub/web/images/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "GET /absimage?path=/root/demohub/web/images/airplane.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "GET /absimage?path=/root/demohub/web/images/bird.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "GET /absimage?path=/root/demohub/web/images/chair.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "GET /absimage?path=/root/demohub/web/images/cat.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "GET /absimage?path=/root/demohub/web/images/deer.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "GET / HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "[36mGET /static/css/app.027f53f817d52007523c1deb4097ebc3.css HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "[36mGET /static/js/manifest.b884e26532d93cfcc394.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "[36mGET /static/js/vendor.7bb2cdc399aff5733fdf.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "[36mGET /static/js/app.5971cc401c3c21f0fa5d.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "[36mGET /static/img/Bg@2x.621bedb.png HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "[36mGET /static/js/0.6d9ed0b0c734cbd37019.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "GET /pageviews?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "[36mGET /static/js/1.505815e7dc48bdc40668.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:21] "GET /data HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "GET /absimage?path=/root/demohub/web/images/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "GET /absimage?path=/root/demohub/web/images/airplane.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "GET /absimage?path=/root/demohub/web/images/bird.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "GET /absimage?path=/root/demohub/web/images/cat.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "GET /absimage?path=/root/demohub/web/images/chair.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "GET /absimage?path=/root/demohub/web/images/deer.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "GET / HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "[36mGET /static/css/app.027f53f817d52007523c1deb4097ebc3.css HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "[36mGET /static/js/manifest.b884e26532d93cfcc394.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "[36mGET /static/js/vendor.7bb2cdc399aff5733fdf.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "[36mGET /static/js/app.5971cc401c3c21f0fa5d.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "[36mGET /static/img/Bg@2x.621bedb.png HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "[36mGET /static/js/0.6d9ed0b0c734cbd37019.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "GET /pageviews?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "[36mGET /static/js/1.505815e7dc48bdc40668.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "GET /data HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "GET /absimage?path=/root/demohub/web/images/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "GET /absimage?path=/root/demohub/web/images/airplane.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "GET /absimage?path=/root/demohub/web/images/bird.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "GET /absimage?path=/root/demohub/web/images/chair.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "GET /absimage?path=/root/demohub/web/images/cat.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "GET /absimage?path=/root/demohub/web/images/deer.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:22] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:23] "GET / HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:23] "[36mGET /static/css/app.027f53f817d52007523c1deb4097ebc3.css HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:23] "[36mGET /static/js/vendor.7bb2cdc399aff5733fdf.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:23] "[36mGET /static/js/manifest.b884e26532d93cfcc394.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:23] "[36mGET /static/js/app.5971cc401c3c21f0fa5d.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:23] "[36mGET /static/img/Bg@2x.621bedb.png HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:23] "GET /pageviews?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:23] "[36mGET /static/js/0.6d9ed0b0c734cbd37019.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:23] "[36mGET /static/js/1.505815e7dc48bdc40668.js HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:23] "GET /data HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:23] "GET /absimage?path=/root/demohub/web/images/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:23] "GET /absimage?path=/root/demohub/web/images/airplane.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:23] "GET /absimage?path=/root/demohub/web/images/chair.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:23] "GET /absimage?path=/root/demohub/web/images/cat.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:23] "GET /absimage?path=/root/demohub/web/images/bird.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:23] "GET /absimage?path=/root/demohub/web/images/deer.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:23] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+172.27.239.155 - - [11/Feb/2023 07:54:24] "GET /data HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:24] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:24] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:24] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:24] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:24] "GET /absimage?path=/root/demohub/demohub/demohub/classification/alexnet/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:24] "GET /absimage?path=/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:24] "GET /absimage?path=/root/demohub/demohub/demohub/classification/regnet/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:24] "GET /absimage?path=/root/demohub/demohub/demohub/classification/resnet/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:24] "GET /absimage?path=/root/demohub/demohub/demohub/classification/resnext/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:24] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/canny/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:24] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/equalize_hist/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:24] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:24] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:24] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:24] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:24] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:24] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:25] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:25] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:25] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:25] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:25] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/yolov5/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:25] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:25] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ann/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:25] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:25] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:25] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:25] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:54:25] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:55:03] "GET /pageviews?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg
+/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg
+/root/demohub/demohub/demohub/classification/resnext/demo.jpg
+/root/demohub/demohub/demohub/classification/resnet/demo.jpg
+/root/demohub/demohub/demohub/classification/regnet/demo.jpg
+/root/demohub/demohub/demohub/classification/alexnet/demo.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg
+/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg
+/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg
+/root/demohub/demohub/demohub/classification/resnext/demo.jpg
+/root/demohub/demohub/demohub/classification/resnet/demo.jpg
+/root/demohub/demohub/demohub/classification/regnet/demo.jpg
+/root/demohub/demohub/demohub/classification/alexnet/demo.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg
+/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg
+/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg
+/root/demohub/demohub/demohub/classification/resnext/demo.jpg
+/root/demohub/demohub/demohub/classification/resnet/demo.jpg
+/root/demohub/demohub/demohub/classification/regnet/demo.jpg
+/root/demohub/demohub/demohub/classification/alexnet/demo.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg
+/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg
+/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg
+/root/demohub/demohub/demohub/classification/resnext/demo.jpg
+/root/demohub/demohub/demohub/classification/resnet/demo.jpg
+/root/demohub/demohub/demohub/classification/regnet/demo.jpg
+/root/demohub/demohub/demohub/classification/alexnet/demo.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg
+/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg
+/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg
+/root/demohub/demohub/demohub/classification/resnext/demo.jpg
+/root/demohub/demohub/demohub/classification/resnet/demo.jpg
+/root/demohub/demohub/demohub/classification/regnet/demo.jpg
+/root/demohub/demohub/demohub/classification/alexnet/demo.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg
+/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg
+/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg
+/root/demohub/demohub/demohub/classification/resnext/demo.jpg
+/root/demohub/demohub/demohub/classification/resnet/demo.jpg
+/root/demohub/demohub/demohub/classification/regnet/demo.jpg
+/root/demohub/demohub/demohub/classification/alexnet/demo.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg
+/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg
+/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg
+/root/demohub/demohub/demohub/classification/resnext/demo.jpg
+/root/demohub/demohub/demohub/classification/resnet/demo.jpg
+/root/demohub/demohub/demohub/classification/regnet/demo.jpg
+/root/demohub/demohub/demohub/classification/alexnet/demo.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg
+/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /data HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/classification/alexnet/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/classification/regnet/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/classification/resnet/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/classification/resnext/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/canny/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/equalize_hist/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ann/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/yolov5/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:48] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:53] "GET /static/js/2.67c780111bf23a20998a.js HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:56:53] "GET /pageviews?type=classification&model=resnet HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:01] "GET /data HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:06] "GET /like?type=segmentation&model=mm_ann HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:07] "GET /dislike?type=segmentation&model=mm_ann HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:08] "GET /dislike?type=segmentation&model=mm_ccnet HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:09] "GET /like?type=segmentation&model=mm_ccnet HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:13] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:14] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:14] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:14] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:14] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:14] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:15] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:15] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:15] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:16] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:16] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:16] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:16] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:17] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:17] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:17] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+172.27.239.155 - - [11/Feb/2023 07:57:17] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+193.32.162.159 - - [11/Feb/2023 08:11:12] "GET / HTTP/1.1" 200 -
+205.210.31.156 - - [11/Feb/2023 08:19:21] "GET / HTTP/1.1" 200 -
+209.141.48.150 - - [11/Feb/2023 08:21:57] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+79.137.207.22 - - [11/Feb/2023 09:16:39] "[33mCONNECT google.com:443 HTTP/1.1[0m" 404 -
+64.62.197.71 - - [11/Feb/2023 09:40:32] "GET / HTTP/1.1" 200 -
+64.62.197.76 - - [11/Feb/2023 09:41:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+101.27.143.208 - - [11/Feb/2023 09:52:20] "GET / HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:27:41] "GET / HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:27:41] "GET /static/css/app.027f53f817d52007523c1deb4097ebc3.css HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:27:41] "GET /static/js/manifest.b884e26532d93cfcc394.js HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:02] "GET / HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:02] "[36mGET /static/css/app.027f53f817d52007523c1deb4097ebc3.css HTTP/1.1[0m" 304 -
+172.27.141.131 - - [11/Feb/2023 10:28:23] "GET /static/js/vendor.7bb2cdc399aff5733fdf.js HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:23] "[36mGET /static/js/manifest.b884e26532d93cfcc394.js HTTP/1.1[0m" 304 -
+172.27.141.131 - - [11/Feb/2023 10:28:23] "GET /static/js/app.5971cc401c3c21f0fa5d.js HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:23] "GET /static/css/app.027f53f817d52007523c1deb4097ebc3.css.map HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /data HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /data HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demo.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demo.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/classification/alexnet/demo.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/classification/regnet/demo.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/classification/resnet/demo.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/classification/resnext/demo.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/canny/demo.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/equalize_hist/demo.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/yolov5/demo.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ann/demo.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:24] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:31] "GET /static/fonts/element-icons.535877f.woff HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:45] "GET /static/img/Bg@2x.621bedb.png HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:28:45] "GET /static/favicon.ico HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:29:36] "GET /static/js/0.6d9ed0b0c734cbd37019.js HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:29:36] "GET /static/js/1.505815e7dc48bdc40668.js HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:29:36] "GET /pageviews?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:29:36] "GET /absimage?path=/root/demohub/web/images/bird.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:29:36] "GET /absimage?path=/root/demohub/web/images/airplane.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:29:36] "GET /absimage?path=/root/demohub/web/images/chair.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:29:36] "GET /absimage?path=/root/demohub/web/images/cat.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:29:36] "GET /absimage?path=/root/demohub/web/images/demo.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:29:36] "GET /absimage?path=/root/demohub/web/images/deer.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:29:45] "OPTIONS /submit HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:29:46] "POST /submit HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:29:46] "GET /absimage?path=/root/demohub/web/images/cat.jpg.albumentations.Blur.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:29:50] "OPTIONS /submit HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:29:51] "POST /submit HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:29:51] "GET /absimage?path=/root/demohub/web/images/cat.jpg.albumentations.CLAHE.jpg HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:30:02] "OPTIONS /submit HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:30:03] "POST /submit HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:30:08] "OPTIONS /submit HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:30:09] "POST /submit HTTP/1.1" 200 -
+172.27.141.131 - - [11/Feb/2023 10:30:09] "GET /absimage?path=/root/demohub/web/images/cat.jpg.albumentations.Defocus.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:35] "GET / HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:35] "GET /static/css/app.027f53f817d52007523c1deb4097ebc3.css HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:35] "GET /static/js/manifest.b884e26532d93cfcc394.js HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:35] "GET /static/js/vendor.7bb2cdc399aff5733fdf.js HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:35] "GET /static/js/app.5971cc401c3c21f0fa5d.js HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:35] "GET /static/img/Bg@2x.621bedb.png HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:35] "GET /data HTTP/1.1" 200 -
+/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg
+/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg
+/root/demohub/demohub/demohub/classification/resnext/demo.jpg
+/root/demohub/demohub/demohub/classification/resnet/demo.jpg
+/root/demohub/demohub/demohub/classification/regnet/demo.jpg
+/root/demohub/demohub/demohub/classification/alexnet/demo.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg
+/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg
+/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg
+/root/demohub/demohub/demohub/classification/resnext/demo.jpg
+/root/demohub/demohub/demohub/classification/resnet/demo.jpg
+/root/demohub/demohub/demohub/classification/regnet/demo.jpg
+/root/demohub/demohub/demohub/classification/alexnet/demo.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg
+/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg
+/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg
+/root/demohub/demohub/demohub/classification/resnext/demo.jpg
+/root/demohub/demohub/demohub/classification/resnet/demo.jpg
+/root/demohub/demohub/demohub/classification/regnet/demo.jpg
+/root/demohub/demohub/demohub/classification/alexnet/demo.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg
+/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg
+/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg
+/root/demohub/demohub/demohub/classification/resnext/demo.jpg
+/root/demohub/demohub/demohub/classification/resnet/demo.jpg
+/root/demohub/demohub/demohub/classification/regnet/demo.jpg
+/root/demohub/demohub/demohub/classification/alexnet/demo.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg
+/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg
+/root/demohub/web/images/cat.jpg
+--funName Blur --funArgs "always_apply=False, blur_limit=7, p=0.5" 
+source /opt/conda/etc/profile.d/conda.sh
+conda activate demohub.albumentations
+python /root/demohub/demohub/demohub/augumentations/albumentations_pixel/demo.py "/root/demohub/web/images/cat.jpg" --funName Blur --funArgs "always_apply=False, blur_limit=7, p=0.5" 
+res_arr: ['output_path is /root/demohub/web/images/cat.jpg.albumentations.Blur.jpg']
+kkkkres: ['output_path is /root/demohub/web/images/cat.jpg.albumentations.Blur.jpg']
+/root/demohub/web/images/cat.jpg
+--funName CLAHE --funArgs "always_apply=False, clip_limit=4.0, p=0.5, tile_grid_size=(8, 8)" 
+source /opt/conda/etc/profile.d/conda.sh
+conda activate demohub.albumentations
+python /root/demohub/demohub/demohub/augumentations/albumentations_pixel/demo.py "/root/demohub/web/images/cat.jpg" --funName CLAHE --funArgs "always_apply=False, clip_limit=4.0, p=0.5, tile_grid_size=(8, 8)" 
+res_arr: ['output_path is /root/demohub/web/images/cat.jpg.albumentations.CLAHE.jpg']
+kkkkres: ['output_path is /root/demohub/web/images/cat.jpg.albumentations.CLAHE.jpg']
+/root/demohub/web/images/cat.jpg
+--funName CLAHE --funArgs "always_apply=False, clip_limit=400.0, p=0.5, tile_grid_size=(8, 8)" 
+source /opt/conda/etc/profile.d/conda.sh
+conda activate demohub.albumentations
+python /root/demohub/demohub/demohub/augumentations/albumentations_pixel/demo.py "/root/demohub/web/images/cat.jpg" --funName CLAHE --funArgs "always_apply=False, clip_limit=400.0, p=0.5, tile_grid_size=(8, 8)" 
+res_arr: ['output_path is /root/demohub/web/images/cat.jpg.albumentations.CLAHE.jpg']
+kkkkres: ['output_path is /root/demohub/web/images/cat.jpg.albumentations.CLAHE.jpg']
+/root/demohub/web/images/cat.jpg
+--funName Defocus --funArgs "alias_blur=(0.1, 0.5), always_apply=False, p=0.5, radius=(3, 10)" 
+source /opt/conda/etc/profile.d/conda.sh
+conda activate demohub.albumentations
+python /root/demohub/demohub/demohub/augumentations/albumentations_pixel/demo.py "/root/demohub/web/images/cat.jpg" --funName Defocus --funArgs "alias_blur=(0.1, 0.5), always_apply=False, p=0.5, radius=(3, 10)" 
+res_arr: ['output_path is /root/demohub/web/images/cat.jpg.albumentations.Defocus.jpg']
+kkkkres: ['output_path is /root/demohub/web/images/cat.jpg.albumentations.Defocus.jpg']
+/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg
+/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg
+/root/demohub/demohub/demohub/classification/resnext/demo.jpg
+/root/demohub/demohub/demohub/classification/resnet/demo.jpg
+/root/demohub/demohub/demohub/classification/regnet/demo.jpg
+/root/demohub/demohub/demohub/classification/alexnet/demo.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg
+/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg
+223.104.40.103 - - [11/Feb/2023 10:30:35] "GET /data HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:35] "GET /static/favicon.ico HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /static/fonts/element-icons.535877f.woff HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/classification/alexnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/classification/regnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/classification/resnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/classification/resnext/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/canny/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/equalize_hist/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/yolov5/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ann/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:36] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:52] "GET /pageviews?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:52] "GET /static/js/0.6d9ed0b0c734cbd37019.js HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:52] "GET /static/js/1.505815e7dc48bdc40668.js HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:52] "GET /absimage?path=/root/demohub/web/images/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:52] "GET /absimage?path=/root/demohub/web/images/airplane.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:52] "GET /absimage?path=/root/demohub/web/images/cat.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:52] "GET /absimage?path=/root/demohub/web/images/bird.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:52] "GET /absimage?path=/root/demohub/web/images/chair.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:30:52] "GET /absimage?path=/root/demohub/web/images/deer.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:06] "OPTIONS /submit HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:07] "POST /submit HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:07] "GET /absimage?path=/root/demohub/web/images/cat.jpg.albumentations.ChannelDropout.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:15] "OPTIONS /submit HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:16] "POST /submit HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:16] "GET /absimage?path=/root/demohub/web/images/cat.jpg.albumentations.Defocus.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:22] "GET /data HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:26] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:27] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:28] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:28] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:29] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:29] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:30] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:30] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:31] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:32] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:32] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:33] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:33] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:34] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:34] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:35] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:35] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:40] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:40] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:40] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:41] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:41] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:41] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:41] "GET /pageviews?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:43] "GET /data HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:46] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:46] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:46] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:46] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:46] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:47] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:47] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:47] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:47] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:47] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:47] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:47] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:47] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:48] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:48] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:48] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:48] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:48] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:48] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:48] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:48] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:48] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:49] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:49] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:49] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:49] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:49] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:49] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:49] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:49] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:50] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:50] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:50] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:50] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:50] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:50] "GET /pageviews?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:55] "GET /data HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:31:58] "GET /static/img/暂无数据icon@2x.a19b72b.png HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:01] "GET /data HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:11] "GET /like?type=object_detection&model=yolov5 HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:12] "GET /like?type=segmentation&model=mm_ann HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:12] "GET /dislike?type=object_detection&model=yolov5 HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:12] "GET /static/js/3.fcd4343ebfbbb41c8525.js HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:12] "GET /pageviews?type=segmentation&model=mm_ann HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:15] "GET /data HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:18] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:19] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:20] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:20] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:20] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:20] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:20] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:20] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:20] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:20] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:20] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:21] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:21] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:21] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:21] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:21] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:21] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:21] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:21] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:22] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:22] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:22] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:22] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:22] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:22] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:22] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:23] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:23] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:23] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:23] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:23] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:23] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:23] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:24] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:24] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:24] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:25] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:25] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:25] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:25] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:25] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:26] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:26] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:26] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:26] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:26] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:26] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:26] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:27] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:27] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:27] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:27] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:27] "GET /dislike?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:27] "GET /dislike?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:27] "GET /like?type=augumentations&model=albumentations_pixel HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:27] "GET /like?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:28] "GET /pageviews?type=augumentations&model=albumentations_spatial HTTP/1.1" 200 -
+/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg
+/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg
+/root/demohub/demohub/demohub/classification/resnext/demo.jpg
+/root/demohub/demohub/demohub/classification/resnet/demo.jpg
+/root/demohub/demohub/demohub/classification/regnet/demo.jpg
+/root/demohub/demohub/demohub/classification/alexnet/demo.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg
+/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg
+/root/demohub/web/images/cat.jpg
+--funName ChannelDropout --funArgs "always_apply=False, channel_drop_range=(1, 1), fill_value=0, p=0.5" 
+source /opt/conda/etc/profile.d/conda.sh
+conda activate demohub.albumentations
+python /root/demohub/demohub/demohub/augumentations/albumentations_pixel/demo.py "/root/demohub/web/images/cat.jpg" --funName ChannelDropout --funArgs "always_apply=False, channel_drop_range=(1, 1), fill_value=0, p=0.5" 
+res_arr: ['output_path is /root/demohub/web/images/cat.jpg.albumentations.ChannelDropout.jpg']
+kkkkres: ['output_path is /root/demohub/web/images/cat.jpg.albumentations.ChannelDropout.jpg']
+/root/demohub/web/images/cat.jpg
+--funName Defocus --funArgs "alias_blur=(0.1, 0.5), always_apply=False, p=0.5, radius=(3, 10)" 
+source /opt/conda/etc/profile.d/conda.sh
+conda activate demohub.albumentations
+python /root/demohub/demohub/demohub/augumentations/albumentations_pixel/demo.py "/root/demohub/web/images/cat.jpg" --funName Defocus --funArgs "alias_blur=(0.1, 0.5), always_apply=False, p=0.5, radius=(3, 10)" 
+res_arr: ['output_path is /root/demohub/web/images/cat.jpg.albumentations.Defocus.jpg']
+kkkkres: ['output_path is /root/demohub/web/images/cat.jpg.albumentations.Defocus.jpg']
+/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg
+/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg
+/root/demohub/demohub/demohub/classification/resnext/demo.jpg
+/root/demohub/demohub/demohub/classification/resnet/demo.jpg
+/root/demohub/demohub/demohub/classification/regnet/demo.jpg
+/root/demohub/demohub/demohub/classification/alexnet/demo.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg
+/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg
+/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg
+/root/demohub/demohub/demohub/classification/resnext/demo.jpg
+/root/demohub/demohub/demohub/classification/resnet/demo.jpg
+/root/demohub/demohub/demohub/classification/regnet/demo.jpg
+/root/demohub/demohub/demohub/classification/alexnet/demo.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg
+/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg
+/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg
+/root/demohub/demohub/demohub/classification/resnext/demo.jpg
+/root/demohub/demohub/demohub/classification/resnet/demo.jpg
+/root/demohub/demohub/demohub/classification/regnet/demo.jpg
+/root/demohub/demohub/demohub/classification/alexnet/demo.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg
+/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg
+/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg
+/root/demohub/demohub/demohub/classification/resnext/demo.jpg
+/root/demohub/demohub/demohub/classification/resnet/demo.jpg
+/root/demohub/demohub/demohub/classification/regnet/demo.jpg
+/root/demohub/demohub/demohub/classification/alexnet/demo.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg
+/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg
+/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg
+/root/demohub/demohub/demohub/classification/resnext/demo.jpg
+/root/demohub/demohub/demohub/classification/resnet/demo.jpg
+/root/demohub/demohub/demohub/classification/regnet/demo.jpg
+/root/demohub/demohub/demohub/classification/alexnet/demo.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg
+/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg
+/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg
+/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg
+/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /data HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/classification/alexnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/canny/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/classification/resnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/classification/resnext/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/classification/regnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/equalize_hist/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/yolov5/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ann/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:53] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:54] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:54] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:54] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:54] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:55] "GET / HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "[36mGET /static/js/manifest.b884e26532d93cfcc394.js HTTP/1.1[0m" 304 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "[36mGET /static/css/app.027f53f817d52007523c1deb4097ebc3.css HTTP/1.1[0m" 304 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "[36mGET /static/js/app.5971cc401c3c21f0fa5d.js HTTP/1.1[0m" 304 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "[36mGET /static/js/vendor.7bb2cdc399aff5733fdf.js HTTP/1.1[0m" 304 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "[36mGET /static/img/Bg@2x.621bedb.png HTTP/1.1[0m" 304 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "GET /data HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "GET /data HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "GET /absimage?path=/root/demohub/demohub/demohub/classification/alexnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "GET /absimage?path=/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "[36mGET /static/fonts/element-icons.535877f.woff HTTP/1.1[0m" 304 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "GET /absimage?path=/root/demohub/demohub/demohub/classification/regnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "GET /absimage?path=/root/demohub/demohub/demohub/classification/resnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "GET /absimage?path=/root/demohub/demohub/demohub/classification/resnext/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/canny/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/equalize_hist/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:56] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:57] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:57] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:57] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:57] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:57] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:57] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/yolov5/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:57] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:57] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ann/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:57] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:57] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:57] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:57] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:32:57] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:33:25] "GET /data HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:45] "GET / HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:45] "[36mGET /static/js/manifest.b884e26532d93cfcc394.js HTTP/1.1[0m" 304 -
+223.104.40.103 - - [11/Feb/2023 10:35:45] "[36mGET /static/css/app.027f53f817d52007523c1deb4097ebc3.css HTTP/1.1[0m" 304 -
+223.104.40.103 - - [11/Feb/2023 10:35:45] "[36mGET /static/js/app.5971cc401c3c21f0fa5d.js HTTP/1.1[0m" 304 -
+223.104.40.103 - - [11/Feb/2023 10:35:45] "[36mGET /static/js/vendor.7bb2cdc399aff5733fdf.js HTTP/1.1[0m" 304 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /data HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "[36mGET /static/img/Bg@2x.621bedb.png HTTP/1.1[0m" 304 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /data HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_spatial/demoout.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /absimage?path=/root/demohub/demohub/demohub/augumentations/albumentations_pixel/demoout.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /absimage?path=/root/demohub/demohub/demohub/classification/alexnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /absimage?path=/root/demohub/demohub/demohub/classification/efficientnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "[36mGET /static/fonts/element-icons.535877f.woff HTTP/1.1[0m" 304 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /absimage?path=/root/demohub/demohub/demohub/classification/regnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /absimage?path=/root/demohub/demohub/demohub/classification/resnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /absimage?path=/root/demohub/demohub/demohub/classification/resnext/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/canny/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/canny/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/equalize_hist/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /absimage?path=/root/demohub/demohub/demohub/image_processing/equalize_hist/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_fasterrcnn/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gcnet/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_gridrcnn/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:46] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:47] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/mm_maskrcnn/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:47] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/yolov5/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:47] "GET /absimage?path=/root/demohub/demohub/demohub/object_detection/yolov5/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:47] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ann/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:47] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ann/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:47] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:47] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_ccnet/demo_res.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:47] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo.jpg HTTP/1.1" 200 -
+223.104.40.103 - - [11/Feb/2023 10:35:47] "GET /absimage?path=/root/demohub/demohub/demohub/segmentation/mm_fast_fcn/demo_res.jpg HTTP/1.1" 200 -
+193.32.162.159 - - [11/Feb/2023 10:49:40] "GET / HTTP/1.1" 200 -
