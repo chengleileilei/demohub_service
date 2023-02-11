@@ -6,3 +6,5 @@ demohub/docs/
 demohub/utils/
 demohub/demohub/object_detection/mmdetection/checkpoints/*
 demohub/demohub/segmentation/mmsegmentation/checkpoints/*
+
+!gitkeep
