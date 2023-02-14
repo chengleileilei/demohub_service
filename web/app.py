@@ -164,11 +164,8 @@ def submit():
 if __name__ == "__main__":
     # 初始化json数据（补充点赞，浏览，默认样例图片数据）
     initJsonData()
+    # 在unix环境下，小于1024的端口不能被普通用户绑定
+    ssl_keys = ('cert/demohub.bjtu.edu.cn.pem', 'cert/demohub.bjtu.edu.cn.key')
+    app.run(debug='True',host='0.0.0.0', port=443,ssl_context=ssl_keys)
+    # app.run(host='0.0.0.0', port=80,debug=True)
 
-    # print("c",current_path)
-    # app.run(host='0.0.0.0', port=80,ssl_context=('demohub.bjtu.edu.cn/fullchain.cer', 'demohub.bjtu.edu.cn/demohub.bjtu.edu.cn.key'))
-    app.run(host='0.0.0.0', port=80,debug=True)
-
-
-
-# app.run(host='0.0.0.0',port=4949, debug=True)
