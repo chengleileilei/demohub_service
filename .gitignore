@@ -3,6 +3,8 @@ misc/
 web/source_images/*
 web/images/*
 web/*.log
+web/cert/
+!web/cert/*.sh
 demohub/docs/
 demohub/utils/
 demohub/demohub/object_detection/mmdetection/checkpoints/*
