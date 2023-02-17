@@ -166,6 +166,7 @@ if __name__ == "__main__":
     initJsonData()
     # 在unix环境下，小于1024的端口不能被普通用户绑定
     ssl_keys = ('cert/demohub.bjtu.edu.cn.pem', 'cert/demohub.bjtu.edu.cn.key')
+    # ssl_keys = ('cert/new/fullchain.crt','cert/new/private.pem')
     app.run(debug='True',host='0.0.0.0', port=443,ssl_context=ssl_keys)
     # app.run(host='0.0.0.0', port=80,debug=True)
 
