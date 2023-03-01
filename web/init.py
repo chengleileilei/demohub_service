@@ -43,7 +43,10 @@ default_data = {
         "../../../../web/images/deer.jpg"
     ]
 }
-
+default_markdown = {
+    "en": "## No description information is available for this model",
+    "cn": "## 此模型暂无说明信息"
+}
 # reset_data={
 #         "show_images": [
 #         "../../../../web/images/demo.jpg",
@@ -91,6 +94,19 @@ def initJsonData():
             model_dirs = find_subdir(type_dir.path)
             for model_dir in model_dirs:
                 if (exist_file(model_dir.path, "setting.json")):
+                    # 初始化info markdown文档
+                    if(not exist_file(model_dir.path, "introduction_cn.md")):
+                        with open(os.path.join(model_dir.path, "introduction_cn.md"),'w') as f:
+                            f.write(default_markdown["cn"])
+                    if(not exist_file(model_dir.path, "introduction_en.md")):
+                        with open(os.path.join(model_dir.path, "introduction_en.md"),'w') as f:
+                            f.write(default_markdown["en"])
+                    # with open(os.path.join(model_dir.path, "introduction_cn.md"),'w') as f:
+                    #     f.write(default_markdown["cn"])
+                    # with open(os.path.join(model_dir.path, "introduction_en.md"),'w') as f:
+                    #     f.write(default_markdown["en"])
+
+
                     model_json = json.load(
                         open(model_dir.path+'/setting.json', 'r', encoding='utf-8'))
                     for key in default_data:
@@ -121,3 +137,4 @@ def initJsonData():
 
 if __name__ == "__main__":
     initJsonData()
+    # print(default_markdown)
