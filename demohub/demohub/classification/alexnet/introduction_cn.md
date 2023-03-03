@@ -1,7 +1,2 @@
-## 此模型暂无说明信息
-- 无序列表
-1. 有序列表
-```python
-print(123)
-```
-[超链接-百度](https://www.baidu.com)
+ # AlexNet
+AlexNet是2012年ImageNet竞赛冠军获得者Hinton和他的学生Alex Krizhevsky设计的。也是在那年之后，更多的更深的神经网络被提出，比如优秀的vgg,GoogLeNet。 这对于传统的机器学习分类算法而言，已经相当的出色。
