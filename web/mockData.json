@@ -56,6 +56,13 @@
                 "cn":"北京交通大学ADAM实验室"
             },
             "url": "https://www.bjtu.edu.cn/"
+        },
+        {
+            "text":{
+                "en":"Visual Big Five Inventory",
+                "cn":"Visual Big Five Inventory"
+            },
+            "url": "http://demohub.bjtu.edu.cn:8080/"
         }],
         "address": {
             "en": "North 207C, No.9 Teaching Building, Beijing Jiaotong University, No.3Shangyuancun, Haidian District, Beijing, 100044, P. R. China",

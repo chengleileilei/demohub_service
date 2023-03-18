@@ -133,8 +133,14 @@ def pageviews():
 def markdown():
     model_type = request.args.get("type")
     model_name = request.args.get("model")
+    model_none = request.args.get("none")
+    print('test',model_none,type(model_none),model_none==None)
+    if (model_name != None and model_name != ''):
+        model_dir = root_dir+'/demohub/demohub/'+ model_type+'/'+model_name +'/'
+    else:
+        model_dir = root_dir+'/demohub/demohub/' + model_type +'/'
 
-    model_dir = root_dir+'/demohub/demohub/'+ model_type+'/'+model_name +'/'
+
     markdown_name_cn = "introduction_cn.md"
     markdown_name_en = "introduction_en.md"
 
@@ -182,7 +188,9 @@ def submit():
     res = jsonify(res)
     return res
 
-
+@app.route('/verification.html',methods=['GET','POST'])
+def verfi():
+    return render_template('dist/verification.html') 
 
 
 if __name__ == "__main__":
@@ -193,4 +201,6 @@ if __name__ == "__main__":
     ssl_keys = ('cert/aliyun/9380646_demohub.bjtu.edu.cn.pem', 'cert/aliyun/9380646_demohub.bjtu.edu.cn.key')
 
     app.run(debug='True',host='0.0.0.0', port=443,ssl_context=ssl_keys)
+    # app.run(debug='True',host='0.0.0.0', port=443)
+
 

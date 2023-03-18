@@ -26,8 +26,8 @@
     },
     "input_image_name": "demo.jpg",
     "output_image_name": "demo.jpg",
-    "likes": 409,
-    "pageviews": 899,
+    "likes": 410,
+    "pageviews": 907,
     "author": "DemoHub",
     "conda_env": "classification",
     "show_images": [
