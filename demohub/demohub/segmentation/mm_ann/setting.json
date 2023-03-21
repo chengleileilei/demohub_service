@@ -4,7 +4,7 @@
         "en": "mm_ann",
         "cn": "mm_ann"
     },
-    "input_image_name": "./demo.jpg",
+    "input_image_name": "../demo.jpg",
     "output_image_name": "./demo_res.jpg",
     "introduction": {
         "tittle": {
@@ -30,7 +30,7 @@
         }
     },
     "likes": 5,
-    "pageviews": 121,
+    "pageviews": 127,
     "show_images": [
         "../../../../web/images/demo.jpg",
         "../../../../web/images/airplane.jpg",

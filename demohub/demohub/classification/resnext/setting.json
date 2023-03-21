@@ -30,8 +30,8 @@
         "en": "resnext",
         "cn": "resnext"
     },
-    "input_image_name": "demo.jpg",
-    "output_image_name": "demo.jpg",
+    "input_image_name": "../demo.jpg",
+    "output_image_name": "../demo.jpg",
     "show_images": [
         "../../../../web/images/demo.jpg",
         "./demo.jpg",

@@ -40,7 +40,7 @@
         "en": "equalize_hist",
         "cn": "equalize_hist"
     },
-    "input_image_name": "demo.jpg",
+    "input_image_name": "../demo.jpg",
     "output_image_name": "demo_res.jpg",
     "show_images": [
         "../../../../web/images/demo.jpg",

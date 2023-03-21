@@ -33,14 +33,14 @@
         }
     },
     "likes": 6,
-    "pageviews": 186,
+    "pageviews": 187,
     "author": "DemoHub",
     "conda_env": "demohub.canny",
     "name": {
         "en": "canny",
         "cn": "canny"
     },
-    "input_image_name": "demo.jpg",
+    "input_image_name": "../demo.jpg",
     "output_image_name": "demo_res.jpg",
     "show_images": [
         "../../../../web/images/demo.jpg",

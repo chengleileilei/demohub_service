@@ -4,7 +4,7 @@
         "en": "mm_ccnet",
         "cn": "mm_ccnet"
     },
-    "input_image_name": "./demo.jpg",
+    "input_image_name": "../demo.jpg",
     "output_image_name": "./demo_res.jpg",
     "introduction": {
         "tittle": {

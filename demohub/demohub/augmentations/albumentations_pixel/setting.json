@@ -904,7 +904,7 @@
         "en": "albumentations(pixel_level)",
         "cn": "albumentations(pixel_level)"
     },
-    "input_image_name": "demo.jpg",
+    "input_image_name": "../demo.jpg",
     "output_image_name": "demoout.jpg",
     "show_images": [
         "../../../../web/images/demo.jpg",
@@ -938,6 +938,6 @@
         }
     },
     "likes": 4,
-    "pageviews": 287,
+    "pageviews": 292,
     "author": "DemoHub"
 }

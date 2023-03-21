@@ -4,7 +4,7 @@
         "en": "mm_fastfcn",
         "cn": "mm_fastfcn"
     },
-    "input_image_name": "./demo.jpg",
+    "input_image_name": "../demo.jpg",
     "output_image_name": "./demo_res.jpg",
     "introduction": {
         "tittle": {
@@ -30,7 +30,7 @@
         }
     },
     "likes": 5,
-    "pageviews": 62,
+    "pageviews": 68,
     "show_images": [
         "../../../../web/images/demo.jpg",
         "../../../../web/images/airplane.jpg",

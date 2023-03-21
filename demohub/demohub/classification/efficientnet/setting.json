@@ -23,15 +23,15 @@
         }
     },
     "likes": 15,
-    "pageviews": 107,
+    "pageviews": 108,
     "author": "DemoHub",
     "conda_env": "classification",
     "name": {
         "en": "efficientnet",
         "cn": "efficientnet"
     },
-    "input_image_name": "demo.jpg",
-    "output_image_name": "demo.jpg",
+    "input_image_name": "../demo.jpg",
+    "output_image_name": "../demo.jpg",
     "show_images": [
         "../../../../web/images/demo.jpg",
         "./demo.jpg",
