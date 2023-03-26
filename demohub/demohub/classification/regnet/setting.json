@@ -1,29 +1,6 @@
 {
-    "introduction": {
-        "tittle": {
-            "en": "INTRODUCTION",
-            "cn": "介绍"
-        },
-        "text": {
-            "en": [
-                "There is no model introduction information!",
-                "For more information, please visit "
-            ],
-            "cn": [
-                "暂无模型介绍信息！",
-                "欲了解更多信息，请访问"
-            ]
-        },
-        "link": {
-            "text": {
-                "en": "https://mmcheng.net",
-                "cn": "https://mmcheng.net"
-            },
-            "url": "https://mmcheng.net"
-        }
-    },
     "likes": 5,
-    "pageviews": 58,
+    "pageviews": 60,
     "author": "DemoHub",
     "conda_env": "classification",
     "name": {

@@ -1,0 +1,2 @@
+webpackJsonp([3],{"6V1x":function(e,n){},"h/xo":function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var a={name:"vbfi",props:["modelData"],created:function(){window.open("http://demohub.bjtu.edu.cn:8080/","_blank")}},r={render:function(){var e=this.$createElement;return(this._self._c||e)("div",{staticClass:"iframe-container"})},staticRenderFns:[]};var i=t("VU/8")(a,r,!1,function(e){t("6V1x")},null,null);n.default=i.exports}});
+//# sourceMappingURL=3.5a0077832ec89a00cd78.js.map

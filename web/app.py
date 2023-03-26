@@ -1,10 +1,12 @@
 # encoding:utf8
 from init import initJsonData,find_subdir,find_subfile,exist_file
-from models import run_model 
+# from models import models.run_model 
+import models
 from flask import Response, Flask, request,jsonify,render_template
 import os,random,string
 import json
 from flask_cors import CORS
+from werkzeug.middleware.proxy_fix import ProxyFix
 
 current_path = os.path.dirname(os.path.abspath(__file__))
 root_dir = os.path.dirname(current_path)
@@ -73,9 +75,13 @@ def getData():
                     model_json["input_image_name"] = image_path
                     image_path = getAbsPath(model_json["output_image_name"], model_dir.path)
                     model_json["output_image_name"] = image_path
-                    print(image_path)
+                    # print(image_path)
                     for i in range(len(model_json["show_images"])):
                         model_json["show_images"][i] = getAbsPath(model_json["show_images"][i], model_dir.path)
+                    # 水印模型的watermark_images路径
+                    if "watermark_images" in model_json:
+                        for i in range(len(model_json["watermark_images"])):
+                            model_json["watermark_images"][i] = getAbsPath(model_json["watermark_images"][i], model_dir.path)
                     t[type_dir.name]["models"][model_dir.name] = model_json
     result["model_type"] = t
     return jsonify(result)
@@ -119,27 +125,15 @@ def pageviews():
         write_f.write(json.dumps(s, indent=4, ensure_ascii=False))
     return jsonify(s["pageviews"])
 
-#  http://127.0.0.1:5000/markdown?type=classification&&model=alexnet
-# @app.route('/markdown',methods=['GET','POST'])
-# def markdown():
-#     model_type = request.args.get("type")
-#     model_name = request.args.get("model")
-#     model_dir = root_dir+'/demohub/demohub/'+ model_type+'/'+model_name+'/introduction.md'
-#     with open(model_dir,'r',encoding='utf-8') as f:
-#         md = f.read()
-#     return md
 
 @app.route('/markdown',methods=['GET','POST'])
 def markdown():
     model_type = request.args.get("type")
     model_name = request.args.get("model")
-    model_none = request.args.get("none")
-    print('test',model_none,type(model_none),model_none==None)
     if (model_name != None and model_name != ''):
         model_dir = root_dir+'/demohub/demohub/'+ model_type+'/'+model_name +'/'
     else:
         model_dir = root_dir+'/demohub/demohub/' + model_type +'/'
-
 
     markdown_name_cn = "introduction_cn.md"
     markdown_name_en = "introduction_en.md"
@@ -176,14 +170,14 @@ def submit():
     demoparams = p['args']
     image_path = p["local_image_url"]
     conda_env = p['conda_env']
-    print(image_path)
+    # print(image_path)
     demoparams_str = ''
     for (arg_name,arg_value) in demoparams.items():
         demoparams_str += '--' +arg_name + ' ' + str(arg_value) + ' ' 
     demoparams_str.replace("(","\(").replace(")","\)")  # inux5.0之后，bash命令参数不能带有括号，需要转译
     # conda_env = p["conda_env"]
-    print(demoparams_str)
-    res = run_model(classname,demoname,image_path,demoparams_str,conda_env)
+    # print(demoparams_str)
+    res = models.run_model(classname,demoname,image_path,demoparams_str,conda_env)
     print("kkkkres:",res)
     res = jsonify(res)
     return res
@@ -192,6 +186,33 @@ def submit():
 def verfi():
     return render_template('dist/verification.html') 
 
+@app.route('/watermark/embed',methods=['GET','POST'])
+def embed():
+    p = request.json
+    classname = p['classname']
+    demoname = p['demoname']
+    demoparams = p['args']
+    image_path = p["local_image_url"]
+    watermark_path = p['local_watermark_url']
+    conda_env = p['conda_env']
+    print(p)
+    res = models.run_watermark_embed(classname,demoname,image_path,watermark_path,demoparams,conda_env)
+    print(res)
+    return jsonify(res)
+
+    
+@app.route('/watermark/extract',methods=['GET','POST'])
+def extract():
+    p = request.json
+    classname = p['classname']
+    demoname = p['demoname']
+    demoparams = p['args']
+    image_path = p["local_image_url"]
+    conda_env = p['conda_env']
+    print(p)
+    res = models.run_watermark_extract(classname,demoname,image_path,demoparams,conda_env)
+    print(res)
+    return jsonify(res)
 
 if __name__ == "__main__":
     # 初始化json数据（补充点赞，浏览，默认样例图片数据）
@@ -201,6 +222,7 @@ if __name__ == "__main__":
     ssl_keys = ('cert/aliyun/9380646_demohub.bjtu.edu.cn.pem', 'cert/aliyun/9380646_demohub.bjtu.edu.cn.key')
 
     app.run(debug='True',host='0.0.0.0', port=443,ssl_context=ssl_keys)
-    # app.run(debug='True',host='0.0.0.0', port=443)
+    # app.wsgi_app = ProxyFix(app.wsgi_app)
+    # app.run(ssl_context=ssl_keys)   
 
 

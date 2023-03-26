@@ -25,52 +25,65 @@
         }
     },
     "footer": {
-	"authors":[{
-	    "name":{
-	        "en":"Xiaowen Huang",
-		"cn":"黄晓雯"
-	    },
-	    "url":"https://faculty.bjtu.edu.cn/9545/"
-	},{
-	    "name":{
-	        "en":"Guanan wang",
-		"cn":"王贯安"
-	    },
-	    "url":"https://wangguanan.github.io/"
-	},{
-	    "name":{
-	        "en":"Lei Cheng",
-		"cn":"程磊"
-	    },
-	    "url":""
-	},{
-	    "name":{
-	        "en":"Jitao Sang",
-		"cn":"桑基韬"
-	    },
-	    "url":"https://faculty.bjtu.edu.cn/9129/"
-	}],
-        "useful_links": [{
-            "text":{
-                "en":"BJTU-ADAM Lab",
-                "cn":"北京交通大学ADAM实验室"
+        "authors": [
+            {
+                "name": {
+                    "en": "Xiaowen Huang",
+                    "cn": "黄晓雯"
+                },
+                "url": "https://faculty.bjtu.edu.cn/9545/"
             },
-            "url": "https://www.bjtu.edu.cn/"
-        },
-        {
-            "text":{
-                "en":"Visual Big Five Inventory",
-                "cn":"Visual Big Five Inventory"
+            {
+                "name": {
+                    "en": "Guanan wang",
+                    "cn": "王贯安"
+                },
+                "url": "https://wangguanan.github.io/"
             },
-            "url": "http://demohub.bjtu.edu.cn:8080/"
-        }],
+            {
+                "name": {
+                    "en": "Lei Cheng",
+                    "cn": "程磊"
+                },
+                "url": "#"
+            },
+            {
+                "name": {
+                    "en": "Jitao Sang",
+                    "cn": "桑基韬"
+                },
+                "url": "https://faculty.bjtu.edu.cn/9129/"
+            }
+        ],
+        "useful_links": [
+            {
+                "text": {
+                    "en": "BJTU-ADAM Lab Page",
+                    "cn": "北京交通大学ADAM实验室"
+                },
+                "url": "http://demohub.bjtu.edu.cn:8000/"
+            },
+            {
+                "text": {
+                    "en": "Visual Big Five Inventory",
+                    "cn": "Visual Big Five Inventory"
+                },
+                "url": "http://demohub.bjtu.edu.cn:8080/"
+            },
+            {
+                "text": {
+                    "en": "BJTU Page",
+                    "cn": "北京交通大学官网"
+                },
+                "url": "https://bjtu.edu.cn"
+            }
+        ],
         "address": {
             "en": "North 207C, No.9 Teaching Building, Beijing Jiaotong University, No.3Shangyuancun, Haidian District, Beijing, 100044, P. R. China",
             "cn": "北京市海淀区上园村3号9号教学楼北207C"
         },
         "email": "xwhuang@bjtu.edu.cn",
         "postcode": "100044",
-	"icp":"BJTUICP备 22111801 @ 2022-2026"
+        "icp": "BJTUICP备 22111801 @ 2022-2026"
     }
-    
 }

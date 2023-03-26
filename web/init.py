@@ -6,29 +6,6 @@ current_path = os.path.dirname(__file__)
 root_dir = os.path.dirname(current_path)
 
 default_data = {
-    "introduction": {
-        "tittle": {
-            "en": "INTRODUCTION",
-            "cn": "介绍"
-        },
-        "text": {
-            "en": [
-                "There is no model introduction information!",
-                "For more information, please visit "
-            ],
-            "cn": [
-                "暂无模型介绍信息！",
-                "欲了解更多信息，请访问"
-            ]
-        },
-        "link": {
-            "text": {
-                "en": "https://mmcheng.net",
-                "cn": "https://mmcheng.net"
-            },
-            "url": "https://mmcheng.net"
-        }
-    },
     "likes": 0,
     "pageviews": 0,
     "input_image_name": "../../../../web/images/default.png",
