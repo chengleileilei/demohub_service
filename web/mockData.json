@@ -2,25 +2,17 @@
     "index": {
         "introduction": {
             "tittle": {
-                "en": "INTRODUCTION",
-                "cn": "介绍"
+                "en": "Machine Learning Open Source Algorithm Platform",
+                "cn": "机器学习开源算法平台"
             },
             "text": {
                 "en": [
-                    "Visual media provides more than 80% percent of human sensory information. The ability of computationally understand the semantic content of visual media can be used for many intelligent computing and services. The Media Computing Group at Nankai University aims at solving important scientific problems in the areas of computer vision, machine learning, image and video processing, and fluid simul ation. Besides publishing research papers, many of our research results have been wildly used in popular everyday using commercial products.",
-                    "For more information, please visit "
+                    "The machine learning open source algorithm platform is developed by the Applied Data Mining and Machine Learning Laboratory of Beijing Jiaotong University. It summarizes classic and latest open source algorithms and provides visualization tools, including image classification, object detection, image segmentation, digital watermarking, image enhancement, style Migration, user psychological portrait and other tasks."
                 ],
                 "cn": [
-                    "视觉媒体提供了超过 80% 的人类感官信息。 计算理解视觉媒体语义内容的能力可用于许多智能计算和服务。 南开大学媒体计算组致力于解决计算机视觉、机器学习、图像和视频处理、流体模拟等领域的重要科学问题。 除了发表研究论文外，我们的许多研究成果已广泛用于流行的日常商业产品中。",
-                    "欲了解更多信息，请访问"
+                    "该机器学习开源算法平台由北京交通大学应用数据挖掘与机器学习实验室开发，汇总经典、最新的开源算法，并提供可视化工具，包括图像分类、目标检测、图像分割、数字水印、图像增强、风格迁移、用户心理画像等多种任务。",
+                    "持续更新算法和任务，敬请期待。"
                 ]
-            },
-            "link": {
-                "text": {
-                    "en": "https://mmcheng.net",
-                    "cn": "https://mmcheng.net"
-                },
-                "url": "https://mmcheng.net"
             }
         }
     },
@@ -65,13 +57,6 @@
             },
             {
                 "text": {
-                    "en": "Visual Big Five Inventory",
-                    "cn": "Visual Big Five Inventory"
-                },
-                "url": "http://demohub.bjtu.edu.cn:8080/"
-            },
-            {
-                "text": {
                     "en": "BJTU Page",
                     "cn": "北京交通大学官网"
                 },
@@ -80,7 +65,7 @@
         ],
         "address": {
             "en": "North 207C, No.9 Teaching Building, Beijing Jiaotong University, No.3Shangyuancun, Haidian District, Beijing, 100044, P. R. China",
-            "cn": "北京市海淀区上园村3号9号教学楼北207C"
+            "cn": "北京市海淀区上园村3号9号教学楼北207D"
         },
         "email": "xwhuang@bjtu.edu.cn",
         "postcode": "100044",

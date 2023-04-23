@@ -1,13 +1,13 @@
 {
     "author": "DemoHub",
     "name": {
-        "en": "mm_ann",
-        "cn": "mm_ann"
+        "en": "ANN",
+        "cn": "ANN"
     },
     "input_image_name": "../demo.jpg",
     "output_image_name": "./demo_res.jpg",
     "likes": 5,
-    "pageviews": 132,
+    "pageviews": 137,
     "show_images": [
         "../../../../web/images/demo.jpg",
         "../../../../web/images/airplane.jpg",

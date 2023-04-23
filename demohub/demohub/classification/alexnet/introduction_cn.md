@@ -1,2 +1,2 @@
- # AlexNet
-AlexNet是2012年ImageNet竞赛冠军获得者Hinton和他的学生Alex Krizhevsky设计的。也是在那年之后，更多的更深的神经网络被提出，比如优秀的vgg,GoogLeNet。 这对于传统的机器学习分类算法而言，已经相当的出色。
+# AlexNet
+&emsp;&emsp;AlexNet是2012年ImageNet竞赛冠军获得者Hinton和他的学生Alex Krizhevsky设计的。也是在那年之后，更多的更深的神经网络被提出，比如优秀的vgg,GoogLeNet。 这对于传统的机器学习分类算法而言，已经相当的出色。

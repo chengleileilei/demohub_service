@@ -1,1 +1,2 @@
-## No description information is available for this model
+# ANN
+&ensp;&ensp;ANN segmentation is an image segmentation algorithm proposed by Uijlings et al. of Microsoft Research Asia in 2013. The core idea of ANN segmentation is to use artificial neural network to segment images.

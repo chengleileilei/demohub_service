@@ -1,12 +1,12 @@
 {
     "name": {
         "en": "LSB",
-        "cn": "LSB(中)"
+        "cn": "LSB"
     },
     "input_image_name": "../image.jpg",
-    "output_image_name": "../watermark.png",
+    "output_image_name": "../watermark_colours/test2.jpg",
     "likes": 1,
-    "pageviews": 148,
+    "pageviews": 217,
     "author": "DemoHub",
     "conda_env": "digital_watermark",
     "show_images": [
@@ -15,7 +15,9 @@
         "../../../../web/images/cat.jpg"
     ],
     "watermark_images": [
-        "../watermark.png",
-        "../watermark.png"
+        "../watermark_colours/test.jpg",
+        "../watermark_colours/test2.jpg",
+        "../watermark_colours/test3.jpg",
+        "../watermark_colours/test4.jpg"
     ]
 }

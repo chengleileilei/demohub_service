@@ -1,3 +1,2 @@
-# Implementation of AlexNet
-
- 
+# AlexNet
+&ensp;&ensp;AlexNet was designed by Hinton, winner of the 2012 ImageNet competition, and his student Alex Krizhevsky. Also after that year, more and deeper neural networks were proposed, such as the excellent vgg, GoogLeNet. This is already quite good for traditional machine learning classification algorithms.

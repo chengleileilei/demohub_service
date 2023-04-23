@@ -1,1 +1,2 @@
-## No description information is available for this model
+# EqualizeHist
+&ensp;&ensp;equalizeHist is an algorithm for image processing that can enhance the contrast of an image. The core idea of the algorithm is to equalize the histogram of the image, so that the distribution of pixel values in the image is more uniform. The equalizeHist algorithm is widely used in the field of image processing.

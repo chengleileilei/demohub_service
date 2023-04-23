@@ -1,1 +1,2 @@
-## No description information is available for this model
+ # LSB
+&emsp;&emsp;LSB (Least Significant Bit) is an algorithm for hiding information in digital images. It is a spatial domain-based algorithm that directly modifies the pixel values of the original image to embed watermark information. The algorithm converts the information to be hidden into binary format and embeds it bit by bit into the least significant bit of the image pixel value. This approach ensures minimal impact on the image appearance, as the least significant bit has the smallest impact on the visual quality of the image.

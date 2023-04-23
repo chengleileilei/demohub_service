@@ -1,1 +1,2 @@
-## No description information is available for this model
+# Canny
+&emsp;&emsp;Canny operator is an edge detection algorithm, which was proposed by computer scientist John F. Canny in 1986. It is currently the most perfect edge detection algorithm in theory. The characteristic of the Canny operator is that it can suppress the noise well, and at the same time it can position the edge well, and the edge positioning accuracy is high, and the false detection rate is low. The implementation process of Canny operator includes the following steps: Gaussian filtering, calculating gradient, non-maximum suppression, double threshold processing and edge connection, etc.

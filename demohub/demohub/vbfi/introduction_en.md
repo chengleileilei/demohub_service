@@ -1,3 +1,3 @@
-# Visual Big Five Inventory
-&ensp;&ensp;。。。。
+# USER PROFILE
+&ensp;&ensp;Image psychology analysis is a science that studies the inner connection and mutual influence between images and human psychology. It is an interdisciplinary subject of psychology and graphics, and belongs to a new branch of psychology. In addition, the mental state analysis system based on image cognition also provides a psychologically based natural image system that can effectively arouse emotions for the research on psychological feature extraction based on image cognition.
  

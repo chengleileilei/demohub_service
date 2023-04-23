@@ -1,1 +1,2 @@
-## No description information is available for this model
+# ResNeXt
+&ensp;&ensp;ResNeXt is a deep neural network model proposed by Xie et al. of Microsoft Research Asia. The core idea of ResNeXt is to use group convolution to build a network, which can make the network deeper without too many parameters.

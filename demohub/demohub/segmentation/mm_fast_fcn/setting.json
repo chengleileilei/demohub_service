@@ -1,13 +1,13 @@
 {
     "author": "DemoHub",
     "name": {
-        "en": "mm_fastfcn",
-        "cn": "mm_fastfcn"
+        "en": "Fast FCN",
+        "cn": "Fast FCN"
     },
     "input_image_name": "../demo.jpg",
     "output_image_name": "./demo_res.jpg",
     "likes": 5,
-    "pageviews": 72,
+    "pageviews": 79,
     "show_images": [
         "../../../../web/images/demo.jpg",
         "../../../../web/images/airplane.jpg",

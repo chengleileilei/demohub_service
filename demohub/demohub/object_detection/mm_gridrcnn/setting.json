@@ -9,12 +9,12 @@
     ],
     "conda_env": "demohub.mmdetection",
     "likes": 1,
-    "pageviews": 19,
+    "pageviews": 21,
     "input_image_name": "../demo.jpg",
     "output_image_name": "./demo_res.jpg",
     "author": "DemoHub",
     "name": {
-        "en": "mm_gridrcnn",
-        "cn": "mm_gridrcnn"
+        "en": "Grid R-CNN",
+        "cn": "Grid R-CNN"
     }
 }

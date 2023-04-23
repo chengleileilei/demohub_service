@@ -901,8 +901,8 @@
     },
     "conda_env": "demohub.albumentations",
     "name": {
-        "en": "albumentations(pixel_level)",
-        "cn": "albumentations(pixel_level)"
+        "en": "Albumentations(pixel level)",
+        "cn": "Albumentations(pixel level)"
     },
     "input_image_name": "../demo.jpg",
     "output_image_name": "demoout.jpg",
@@ -915,6 +915,6 @@
         "../../../../web/images/deer.jpg"
     ],
     "likes": 4,
-    "pageviews": 318,
+    "pageviews": 352,
     "author": "DemoHub"
 }

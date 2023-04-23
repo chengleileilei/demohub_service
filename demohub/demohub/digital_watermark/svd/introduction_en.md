@@ -1,1 +1,3 @@
-## No description information is available for this model
+ # SVD
+&emsp;&emsp;Singular value decomposition (SVD) is a hybrid digital watermarking technique. It first applies discrete wavelet transform to the original image and watermark to obtain four frequency subbands: LL, LH, HL, and HH. Then, SVD is performed on the three high-frequency subbands, and the watermark information is embedded into the singular values. Finally, an inverse transform is applied to obtain the watermarked image. Since the positions where the watermark is embedded are in the singular value matrix, which is relatively sparse and widely distributed, the SVD algorithm has good robustness and can resist certain attacks and noise interference, ensuring the reliability of the watermark.
+

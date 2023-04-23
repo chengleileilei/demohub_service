@@ -1,3 +1,3 @@
-# Image watermark
-&ensp;&ensp;Image watermark embedding and extraction.
- 
+# Digital watermark
+&ensp;&ensp;Image digital watermarking is the process of embedding a digital watermark into a digital image, which can be divided into two stages: watermark embedding and extraction. The watermark embedding process involves embedding the watermark information into the image using an embedding module. The watermark extraction can be seen as the inverse transformation of the embedding, where the original watermark information is extracted from the embedded image using an extraction module. The methods for embedding digital watermarks in digital images include frequency domain techniques, spatial domain techniques, and hybrid techniques. Common image digital watermarking techniques include least significant bit (LSB), discrete cosine transform (DCT), and singular value decomposition (SVD), among others.
+

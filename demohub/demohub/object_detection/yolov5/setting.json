@@ -1,13 +1,13 @@
 {
     "author": "DemoHub",
     "name": {
-        "en": "YOLOV5S",
-        "cn": "YOLOV5S"
+        "en": "YoloV5s",
+        "cn": "YoloV5s"
     },
     "input_image_name": "../demo.jpg",
     "output_image_name": "./demo_res.jpg",
     "likes": 4,
-    "pageviews": 56,
+    "pageviews": 59,
     "show_images": [
         "../../../../web/images/demo.jpg",
         "../../../../web/images/airplane.jpg",

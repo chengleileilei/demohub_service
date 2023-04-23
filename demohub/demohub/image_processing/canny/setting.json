@@ -10,12 +10,12 @@
         }
     },
     "likes": 6,
-    "pageviews": 195,
+    "pageviews": 206,
     "author": "DemoHub",
     "conda_env": "demohub.canny",
     "name": {
-        "en": "canny",
-        "cn": "canny"
+        "en": "Canny",
+        "cn": "Canny"
     },
     "input_image_name": "../demo.jpg",
     "output_image_name": "demo_res.jpg",

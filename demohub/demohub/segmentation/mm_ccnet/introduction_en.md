@@ -1,1 +1,2 @@
-## No description information is available for this model
+# CCNet
+&emsp;&emsp;CCNet is an image segmentation algorithm proposed by Huang et al. of Huazhong University of Science and Technology in 2019. The core idea of CCNet is to use the channel attention mechanism to weight feature maps to improve segmentation performance.

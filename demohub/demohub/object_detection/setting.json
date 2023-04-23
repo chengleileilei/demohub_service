@@ -1,6 +1,7 @@
 {
     "name": {
         "en": "OBJECT DETECTION",
-        "cn": "图像检测"
-    }
+        "cn": "目标检测"
+    },
+    "priority":2
 }

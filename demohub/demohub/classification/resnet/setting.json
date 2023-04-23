@@ -1,17 +1,17 @@
 {
     "likes": 17,
-    "pageviews": 69,
+    "pageviews": 77,
     "author": "DemoHub",
     "conda_env": "classification",
     "name": {
-        "en": "resnet",
-        "cn": "resnet"
+        "en": "ResNet",
+        "cn": "ResNet"
     },
     "input_image_name": "../demo.jpg",
     "output_image_name": "../demo.jpg",
     "show_images": [
         "../../../../web/images/demo.jpg",
-        "./demo.jpg",
+        "../demo.jpg",
         "../../../../web/images/bird.jpg",
         "../../../../web/images/cat.jpg",
         "../../../../web/images/chair.jpg",

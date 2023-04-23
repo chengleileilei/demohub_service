@@ -1,6 +1,7 @@
 {
     "name": {
-        "en": "Image watermark",
-        "cn": "图像水印"
-    }
+        "en": "DIGITAL WATERMARK",
+        "cn": "数字水印"
+    },
+    "priority":6
 }

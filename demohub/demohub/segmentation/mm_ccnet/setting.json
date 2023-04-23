@@ -1,13 +1,13 @@
 {
     "author": "DemoHub",
     "name": {
-        "en": "mm_ccnet",
-        "cn": "mm_ccnet"
+        "en": "CCNet",
+        "cn": "CCNet"
     },
     "input_image_name": "../demo.jpg",
     "output_image_name": "./demo_res.jpg",
     "likes": 6,
-    "pageviews": 81,
+    "pageviews": 84,
     "show_images": [
         "../../../../web/images/demo.jpg",
         "../../../../web/images/airplane.jpg",

@@ -1,13 +1,13 @@
 {
     "author": "DemoHub",
     "name": {
-        "en": "mm_fasterrcnn",
-        "cn": "mm_fasterrcnn"
+        "en": "Faster R-CNN",
+        "cn": "Faster R-CNN"
     },
     "input_image_name": "../demo.jpg",
     "output_image_name": "./demo_res.jpg",
     "likes": 4,
-    "pageviews": 96,
+    "pageviews": 107,
     "show_images": [
         "../../../../web/images/demo.jpg",
         "../../../../web/images/airplane.jpg",

@@ -1,7 +1,8 @@
 {
     "name": {
-        "en": "Others",
-        "cn": "图像心理分析"
-    }
+        "en": "USER PROFILE",
+        "cn": "用户画像"
+    },
+    "priority": 7
 
 }

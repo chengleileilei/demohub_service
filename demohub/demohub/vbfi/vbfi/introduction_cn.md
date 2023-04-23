@@ -1,2 +1,4 @@
-## 正在跳转到Vbfi页面，若跳转失败，请点击
-http://demohub.bjtu.edu.cn:8080/
+# Vbfi
+&emsp;&emsp;Vbfi模型能够通过一组视觉问题在五个维度上准确估计人格特征。
+
+若页面跳转失败，请点击http://demohub.bjtu.edu.cn:8080/

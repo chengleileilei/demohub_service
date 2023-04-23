@@ -1,6 +1,8 @@
 {
     "name": {
-        "en": "CLASSIFICATION",
+        "en": "IMAGE CLASSIFICATION",
         "cn": "图像分类"
-    }
+    },
+    "priority":1
+
 }

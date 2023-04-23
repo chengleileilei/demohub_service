@@ -2,5 +2,6 @@
     "name": {
         "en": "IMAGE PROCESS",
         "cn": "图像处理"
-    }
+    },
+    "priority":5
 }

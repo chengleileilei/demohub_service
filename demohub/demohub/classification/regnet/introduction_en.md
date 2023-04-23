@@ -1,1 +1,2 @@
-## No description information is available for this model
+# RegNet
+&ensp;&ensp;RegNet is a deep neural network model for image classification, proposed by He Yuming's team. The core idea of RegNet is to use a new network design space that can be sampled by simple rules, resulting in a series of efficient network structures. RegNet performance surpasses EfficientNet, while speeding up 5 times on GPU.

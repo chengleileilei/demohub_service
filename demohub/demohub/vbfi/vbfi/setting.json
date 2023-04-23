@@ -1,12 +1,12 @@
 {
     "args": {},
     "likes": 2,
-    "pageviews": 44,
+    "pageviews": 68,
     "author": "DemoHub",
     "conda_env": "none",
     "name": {
-        "en": "vbfi",
-        "cn": "vbfi"
+        "en": "vBFI",
+        "cn": "vBFI"
     },
     "input_image_name": "../demo.jpg",
     "output_image_name": "./demo_res.jpg",

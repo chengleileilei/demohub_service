@@ -8,6 +8,8 @@ import json
 from flask_cors import CORS
 from werkzeug.middleware.proxy_fix import ProxyFix
 
+import utils
+
 current_path = os.path.dirname(os.path.abspath(__file__))
 root_dir = os.path.dirname(current_path)
 
@@ -83,8 +85,11 @@ def getData():
                         for i in range(len(model_json["watermark_images"])):
                             model_json["watermark_images"][i] = getAbsPath(model_json["watermark_images"][i], model_dir.path)
                     t[type_dir.name]["models"][model_dir.name] = model_json
+    print(type(t),t)
+    t = utils.sort_dict_by_priority(t)
     result["model_type"] = t
-    return jsonify(result)
+    return Response(json.dumps(result), mimetype='application/json')
+    # return jsonify(result)
 
 #  http://127.0.0.1:5000/like?type=classification&&model=alexnet
 @app.route("/like",methods=['post','get'])
@@ -220,6 +225,8 @@ if __name__ == "__main__":
     # 在unix环境下，小于1024的端口不能被普通用户绑定
     # ssl_keys = ('cert/demohub.bjtu.edu.cn.pem', 'cert/demohub.bjtu.edu.cn.key')
     ssl_keys = ('cert/aliyun/9380646_demohub.bjtu.edu.cn.pem', 'cert/aliyun/9380646_demohub.bjtu.edu.cn.key')
+
+    # app.run(debug='True',host='0.0.0.0', port=80)
 
     app.run(debug='True',host='0.0.0.0', port=443,ssl_context=ssl_keys)
     # app.wsgi_app = ProxyFix(app.wsgi_app)
