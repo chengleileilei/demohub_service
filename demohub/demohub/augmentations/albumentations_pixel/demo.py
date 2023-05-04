@@ -36,8 +36,12 @@ def main():
     image = read_image(args.image_path)
     # image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
+    print("---args:::",args)
+    # fun_comm = "A."+args.funName + '( ' + args.funArgs +' )'
+
+
     transform = A.Compose([
-        eval("A."+args.funName + '( ' + args.funArgs +' )')
+        # eval(fun_comm)
 
         # A.RandomCrop(width=256, height=256),
         # A.HorizontalFlip(p=0.1),

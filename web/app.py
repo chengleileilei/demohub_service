@@ -85,7 +85,7 @@ def getData():
                         for i in range(len(model_json["watermark_images"])):
                             model_json["watermark_images"][i] = getAbsPath(model_json["watermark_images"][i], model_dir.path)
                     t[type_dir.name]["models"][model_dir.name] = model_json
-    print(type(t),t)
+    # print(type(t),t)
     t = utils.sort_dict_by_priority(t)
     result["model_type"] = t
     return Response(json.dumps(result), mimetype='application/json')
@@ -175,7 +175,7 @@ def submit():
     demoparams = p['args']
     image_path = p["local_image_url"]
     conda_env = p['conda_env']
-    # print(image_path)
+    print("收到的原始参数：",demoparams)
     demoparams_str = ''
     for (arg_name,arg_value) in demoparams.items():
         demoparams_str += '--' +arg_name + ' ' + str(arg_value) + ' ' 
@@ -183,7 +183,7 @@ def submit():
     # conda_env = p["conda_env"]
     # print(demoparams_str)
     res = models.run_model(classname,demoname,image_path,demoparams_str,conda_env)
-    print("kkkkres:",res)
+    # print("kkkkres:",res)
     res = jsonify(res)
     return res
 

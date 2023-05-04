@@ -18,7 +18,7 @@ def run_model(classname,demoname,image_path,demoparams,conda_env):
     command = generate_command(conda_env,demo_path,pngToJpg(image_path),demoparams)
     print(command)
     res_arr = subprocess_popen(command)
-    print('res_arr:',res_arr)
+    # print('res_arr:',res_arr)
     return res_arr
 
 def generate_watermark_embed_command(conda_env,demo_path,image_path,watermark_path,demoparams = ''):
