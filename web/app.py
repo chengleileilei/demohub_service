@@ -175,7 +175,7 @@ def submit():
     demoparams = p['args']
     image_path = p["local_image_url"]
     conda_env = p['conda_env']
-    print("收到的原始参数：",demoparams)
+    # print("收到的原始参数：",demoparams)
     demoparams_str = ''
     for (arg_name,arg_value) in demoparams.items():
         demoparams_str += '--' +arg_name + ' ' + str(arg_value) + ' ' 
