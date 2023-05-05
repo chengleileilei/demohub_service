@@ -444,9 +444,6 @@
                 "pad_width_divisor": {
                     "default": "None"
                 },
-                "position": {
-                    "default": "PositionType.CENTER"
-                },
                 "border_mode": {
                     "default": "4"
                 },
@@ -519,9 +516,6 @@
                 },
                 "cval_mask": {
                     "default": "0"
-                },
-                "mode": {
-                    "default": "constant"
                 },
                 "absolute_scale": {
                     "default": "False"
@@ -605,9 +599,6 @@
             "args": {
                 "max_part_shift": {
                     "default": "(0.3, 0.3)"
-                },
-                "cropping_box_key": {
-                    "default": "cropping_bbox"
                 },
                 "always_apply": {
                     "default": "False"
@@ -772,9 +763,6 @@
                 "mask_value": {
                     "default": "None"
                 },
-                "rotate_method": {
-                    "default": "largest_box"
-                },
                 "crop_border": {
                     "default": "False"
                 },
@@ -842,9 +830,6 @@
                 "shift_limit_y": {
                     "default": "None"
                 },
-                "rotate_method": {
-                    "default": "largest_box"
-                },
                 "always_apply": {
                     "default": "False"
                 },
@@ -910,6 +895,6 @@
         "../../../../web/images/deer.jpg"
     ],
     "likes": 4,
-    "pageviews": 187,
+    "pageviews": 191,
     "author": "DemoHub"
 }

@@ -167,9 +167,6 @@
         },
         "Equalize": {
             "args": {
-                "mode": {
-                    "default": "cv"
-                },
                 "by_channels": {
                     "default": "True"
                 },
@@ -188,26 +185,6 @@
             },
             "doc": "Equalize the image histogram.\n\n    Args:\n        mode (str): {'cv', 'pil'}. Use OpenCV or Pillow equalization method.\n        by_channels (bool): If True, use equalization by channels separately,\n            else convert image to YCbCr representation and use equalization by `Y` channel.\n        mask (np.ndarray, callable): If given, only the pixels selected by\n            the mask are included in the analysis. Maybe 1 channel or 3 channel array or callable.\n            Function signature must include `image` argument.\n        mask_params (list of str): Params for mask function.\n\n    Targets:\n        image\n\n    Image types:\n        uint8\n    "
         },
-        "FDA": {
-            "args": {
-                "reference_images": {
-                    "default": ""
-                },
-                "beta_limit": {
-                    "default": "0.1"
-                },
-                "read_fn": {
-                    "default": "<function read_rgb_image at 0x7efbd451a9e0>"
-                },
-                "always_apply": {
-                    "default": "False"
-                },
-                "p": {
-                    "default": "0.5"
-                }
-            },
-            "doc": "\n    Fourier Domain Adaptation from https://github.com/YanchaoYang/FDA\n    Simple \"style transfer\".\n\n    Args:\n        reference_images (List[str] or List(np.ndarray)): List of file paths for reference images\n            or list of reference images.\n        beta_limit (float or tuple of float): coefficient beta from paper. Recommended less 0.3.\n        read_fn (Callable): Used-defined function to read image. Function should get image path and return numpy\n            array of image pixels.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n\n    Reference:\n        https://github.com/YanchaoYang/FDA\n        https://openaccess.thecvf.com/content_CVPR_2020/papers/Yang_FDA_Fourier_Domain_Adaptation_for_Semantic_Segmentation_CVPR_2020_paper.pdf\n\n    Example:\n        >>> import numpy as np\n        >>> import albumentations as A\n        >>> image = np.random.randint(0, 256, [100, 100, 3], dtype=np.uint8)\n        >>> target_image = np.random.randint(0, 256, [100, 100, 3], dtype=np.uint8)\n        >>> aug = A.Compose([A.FDA([target_image], p=1, read_fn=lambda x: x)])\n        >>> result = aug(image=image)\n\n    "
-        },
         "FancyPCA": {
             "args": {
                 "alpha": {
@@ -224,9 +201,6 @@
         },
         "FromFloat": {
             "args": {
-                "dtype": {
-                    "default": "uint16"
-                },
                 "max_value": {
                     "default": "None"
                 },
@@ -290,34 +264,11 @@
                 "always_apply": {
                     "default": "False"
                 },
-                "mode": {
-                    "default": "fast"
-                },
                 "p": {
                     "default": "0.5"
                 }
             },
             "doc": "Apply glass noise to the input image.\n\n    Args:\n        sigma (float): standard deviation for Gaussian kernel.\n        max_delta (int): max distance between pixels which are swapped.\n        iterations (int): number of repeats.\n            Should be in range [1, inf). Default: (2).\n        mode (str): mode of computation: fast or exact. Default: \"fast\".\n        p (float): probability of applying the transform. Default: 0.5.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, float32\n\n    Reference:\n    |  https://arxiv.org/abs/1903.12261\n    |  https://github.com/hendrycks/robustness/blob/master/ImageNet-C/create_c/make_imagenet_c.py\n    "
-        },
-        "HistogramMatching": {
-            "args": {
-                "reference_images": {
-                    "default": ""
-                },
-                "blend_ratio": {
-                    "default": "(0.5, 1.0)"
-                },
-                "read_fn": {
-                    "default": "<function read_rgb_image at 0x7efbd451a9e0>"
-                },
-                "always_apply": {
-                    "default": "False"
-                },
-                "p": {
-                    "default": "0.5"
-                }
-            },
-            "doc": "\n    Apply histogram matching. It manipulates the pixels of an input image so that its histogram matches\n    the histogram of the reference image. If the images have multiple channels, the matching is done independently\n    for each channel, as long as the number of channels is equal in the input image and the reference.\n\n    Histogram matching can be used as a lightweight normalisation for image processing,\n    such as feature matching, especially in circumstances where the images have been taken from different\n    sources or in different conditions (i.e. lighting).\n\n    See:\n        https://scikit-image.org/docs/dev/auto_examples/color_exposure/plot_histogram_matching.html\n\n    Args:\n        reference_images (List[str] or List(np.ndarray)): List of file paths for reference images\n            or list of reference images.\n        blend_ratio (float, float): Tuple of min and max blend ratio. Matched image will be blended with original\n            with random blend factor for increased diversity of generated images.\n        read_fn (Callable): Used-defined function to read image. Function should get image path and return numpy\n            array of image pixels.\n        p (float): probability of applying the transform. Default: 1.0.\n\n    Targets:\n        image\n\n    Image types:\n        uint8, uint16, float32\n    "
         },
         "HueSaturationValue": {
             "args": {
@@ -363,9 +314,6 @@
                 },
                 "quality_upper": {
                     "default": "100"
-                },
-                "compression_type": {
-                    "default": "ImageCompressionType.JPEG"
                 },
                 "always_apply": {
                     "default": "False"
@@ -465,9 +413,6 @@
                 },
                 "blend_ratio": {
                     "default": "(0.25, 1.0)"
-                },
-                "read_fn": {
-                    "default": "<function read_rgb_image at 0x7efbd451a9e0>"
                 },
                 "transform_type": {
                     "default": "pca"
@@ -761,9 +706,6 @@
                 "intensity": {
                     "default": "0.6"
                 },
-                "mode": {
-                    "default": "rain"
-                },
                 "always_apply": {
                     "default": "False"
                 },
@@ -915,6 +857,6 @@
         "../../../../web/images/deer.jpg"
     ],
     "likes": 4,
-    "pageviews": 401,
+    "pageviews": 430,
     "author": "DemoHub"
 }

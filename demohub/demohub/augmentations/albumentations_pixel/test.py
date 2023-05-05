@@ -31,28 +31,41 @@ def parse_arg():
 def save_image(image: np.ndarray, output_path: str):
     cv2.imwrite(output_path, image)
 
-def main():
-    args = parse_arg()
-    image = read_image(args.image_path)
+def main(): 
+    image_path = "/home/user/demohub_data/demohub/web/images/cat.jpg"
+    image = read_image(image_path)
     # image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-    fun_comm = "A."+args.funName + '( ' + args.funArgs +' )'
+    # fun_comm = "A."+funName + '( ' + funArgs +' )'
     # print("***fun_comm:::",fun_comm)
 
 
     transform = A.Compose([
-        eval(fun_comm)
-    ])
+        A.ToGray(always_apply=False, p=0),
 
+        # A.RandomCrop(width=256, height=256),
+        # A.HorizontalFlip(p=0.1),
+        # A.RandomBrightnessContrast(p=0.5),
+    ]) 
     transformed = transform(image=image)
 
     transformed_image = transformed["image"]
 
-    output_path = osp.join(
-        osp.dirname(args.image_path), 
-        osp.basename(args.image_path)+'.albumentations.{}.jpg'.format(args.funName).replace(' ',''))
-    save_image(transformed_image,output_path)
-    print("output_path is {}".format(output_path))
+    transform = A.Compose([
+        A.ToGray(always_apply=False, p=1),
+
+        # A.RandomCrop(width=256, height=256),
+        # A.HorizontalFlip(p=0.1),
+        # A.RandomBrightnessContrast(p=0.5),
+    ])
+    transformed = transform(image=image)
+
+    transformed_image = transformed["image"]
+    # output_path = osp.join(
+    #     osp.dirname(image_path), 
+    #     osp.basename(image_path)+'.albumentations.{}.jpg'.format(funName))
+    # save_image(transformed_image,output_path)
+    print("output_path is {}".format(1))
 
 
 if __name__ == "__main__":

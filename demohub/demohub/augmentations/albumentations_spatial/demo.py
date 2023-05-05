@@ -36,12 +36,12 @@ def main():
     image = read_image(args.image_path)
     # image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-    transform = A.Compose([
-        eval("A."+args.funName + '( ' + args.funArgs +' )')
+    fun_comm = "A."+args.funName + '( ' + args.funArgs +' )'
+    # print("***fun_comm:::",fun_comm)
 
-        # A.RandomCrop(width=256, height=256),
-        # A.HorizontalFlip(p=0.1),
-        # A.RandomBrightnessContrast(p=0.5),
+
+    transform = A.Compose([
+        eval(fun_comm)
     ])
 
     transformed = transform(image=image)
@@ -50,7 +50,7 @@ def main():
 
     output_path = osp.join(
         osp.dirname(args.image_path), 
-        osp.basename(args.image_path)+'.albumentations.{}.jpg'.format(args.funName))
+        osp.basename(args.image_path)+'.albumentations.{}.jpg'.format(args.funName).replace(' ',''))
     save_image(transformed_image,output_path)
     print("output_path is {}".format(output_path))
 
