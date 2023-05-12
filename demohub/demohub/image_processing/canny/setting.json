@@ -1,16 +1,24 @@
 {
     "args": {
-        "space": {
-            "type": "select",
+        "threshold1": {
+            "type": "int",
             "values": [
-                "rgb",
-                "hsv"
+                0,
+                9999
             ],
-            "default": "rgb"
+            "default": 100
+        },
+        "threshold2": {
+            "type": "int",
+            "values": [
+                0,
+                9999
+            ],
+            "default": 200
         }
     },
     "likes": 6,
-    "pageviews": 207,
+    "pageviews": 225,
     "author": "DemoHub",
     "conda_env": "demohub.canny",
     "name": {

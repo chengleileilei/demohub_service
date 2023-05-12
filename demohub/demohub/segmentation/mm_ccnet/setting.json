@@ -7,14 +7,14 @@
     "input_image_name": "../demo.jpg",
     "output_image_name": "./demo_res.jpg",
     "likes": 6,
-    "pageviews": 87,
+    "pageviews": 110,
     "show_images": [
-        "../../../../web/images/demo.jpg",
-        "../../../../web/images/airplane.jpg",
-        "../../../../web/images/bird.jpg",
-        "../../../../web/images/cat.jpg",
+        "../../../../web/images/street.jpg",
+        "../../../../web/images/cars.jpg",
+        "../../../../web/images/airport.jpg",
+        "../../../../web/images/penguin.jpg",
         "../../../../web/images/chair.jpg",
-        "../../../../web/images/deer.jpg"
+        "../../../../web/images/runners.jpg"
     ],
     "conda_env": "demohub.mmsegmentation"
 }

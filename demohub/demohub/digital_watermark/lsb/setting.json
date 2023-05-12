@@ -6,7 +6,7 @@
     "input_image_name": "../image.jpg",
     "output_image_name": "../watermark_colours/test2.jpg",
     "likes": 2,
-    "pageviews": 220,
+    "pageviews": 227,
     "author": "DemoHub",
     "conda_env": "digital_watermark",
     "show_images": [

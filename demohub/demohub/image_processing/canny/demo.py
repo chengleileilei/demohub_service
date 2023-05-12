@@ -7,24 +7,9 @@ import numpy as np
 def read_image(image_path: str):
     return cv2.imread(image_path, 1)
 
-def equalize_hist(image: np.ndarray, space='rgb'):
-    if space == 'rgb':
-        image = image
-        (c1, c2, c3) = cv2.split(image)
-        c1 = cv2.equalizeHist(c1)
-        c2 = cv2.equalizeHist(c2)
-        c3 = cv2.equalizeHist(c3)
-        image = cv2.merge((c1, c2, c3))
-    elif space == 'hsv':
-        image = cv2.cvtColor(image, cv2.COLOR_BGR2YCrCb)
-        image = list(cv2.split(image))
-        image[0] = cv2.equalizeHist(image[0])
-        image = cv2.merge(image)
-        image = cv2.cvtColor(image, cv2.COLOR_YCrCb2BGR)
-    else:
-        raise ValueError("expect space in [rgb, hsv]")
-    # print(type(image))
-    return image
+def canny(image: np.ndarray,threshold1=100,threshold2=200):
+    edges = cv2.Canny(image,threshold1,threshold2)
+    return edges
 
 def save_image(image: np.ndarray, output_path: str):
     cv2.imwrite(output_path, image)
@@ -37,10 +22,16 @@ def parse_arg():
         help="path to input image *.jpg"
     )
     parser.add_argument(
-        "--space", 
+        "--threshold1", 
         type=str,
-        default="rgb",
-        help="space to equalize hist, support rgb and hsv"
+        default="100",
+        help="threshold1"
+    )
+    parser.add_argument(
+        "--threshold2", 
+        type=str,
+        default="200",
+        help="threshold2"
     )
     args = parser.parse_args()
     return args
@@ -48,10 +39,10 @@ def parse_arg():
 def main():
     args = parse_arg()
     image = read_image(args.image_path)
-    image = equalize_hist(image, args.space)
+    image = canny(image,int(args.threshold1),int(args.threshold2))
     output_path = osp.join(
         osp.dirname(args.image_path), 
-        osp.basename(args.image_path)+'.eh.{}.jpg'.format(args.space))
+        osp.basename(args.image_path)+'.canny.jpg')
     print("output_path is {}".format(output_path))
     save_image(image, output_path)
 

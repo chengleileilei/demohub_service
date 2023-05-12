@@ -5,3 +5,5 @@
 
 - [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)
 - [ResNet详解](https://zhuanlan.zhihu.com/p/31852747) -->
+- [论文链接：https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7995968](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7995968)
+- [github仓库：https://github.com/pytorch/vision/blob/main/torchvision/models/resnet.py](https://github.com/pytorch/vision/blob/main/torchvision/models/resnet.py)

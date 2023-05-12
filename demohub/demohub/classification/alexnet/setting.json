@@ -4,13 +4,13 @@
         "cn": "Alexnet"
     },
     "input_image_name": "../demo.jpg",
-    "output_image_name": "../demo.jpg",
+    "output_image_name": "res.jpg",
     "likes": 410,
-    "pageviews": 953,
+    "pageviews": 994,
     "author": "DemoHub",
     "conda_env": "classification",
     "show_images": [
-        "../../../../web/images/demo.jpg",
+        "../../../../web/images/owl.jpg",
         "../demo.jpg",
         "../../../../web/images/bird.jpg",
         "../../../../web/images/cat.jpg",
