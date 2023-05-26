@@ -6,7 +6,7 @@
     "input_image_name": "../demo.jpg",
     "output_image_name": "res.jpg",
     "likes": 410,
-    "pageviews": 994,
+    "pageviews": 997,
     "author": "DemoHub",
     "conda_env": "classification",
     "show_images": [

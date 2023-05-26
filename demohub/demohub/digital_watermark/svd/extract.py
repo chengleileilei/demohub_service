@@ -20,6 +20,7 @@ if __name__=="__main__":
     parser.add_argument('--form', type = str, default = "img")
     parser.add_argument('--method', type = str, default = "SVD")
     args = parser.parse_args()
+    args.img = args.img.replace("&t","")
     img = cv2.imread(args.img)
     form = args.form
     if args.method not in __method.keys():

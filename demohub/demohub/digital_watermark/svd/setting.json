@@ -3,17 +3,19 @@
         "en": "SVD",
         "cn": "SVD"
     },
-    "input_image_name": "../image.jpg",
+    "input_image_name": "../../../../web/images/building.jpg",
     "output_image_name": "../watermark_white_black/test3.jpg",
     "likes": 1,
-    "pageviews": 177,
+    "pageviews": 183,
     "author": "DemoHub",
     "conda_env": "digital_watermark",
     "show_images": [
-        "../big_show_images/airplane.jpg",
-        "../big_show_images/bird.jpg",
-        "../big_show_images/deer.jpg",
-        "../big_show_images/dog.jpg"
+        "../../../../web/images/building.jpg",
+        "../../../../web/images/mountain.jpg",
+        "../../../../web/images/cat2.jpg",
+        "../../../../web/images/sky.jpg",
+        "../../../../web/images/chocolate.jpg",
+        "../../../../web/images/cat3.jpg"
     ],
     "watermark_images": [
         "../watermark_white_black/test.jpg",

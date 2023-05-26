@@ -9,7 +9,7 @@
     ],
     "conda_env": "demohub.mmdetection",
     "likes": 1,
-    "pageviews": 25,
+    "pageviews": 26,
     "input_image_name": "../demo.jpg",
     "output_image_name": "./demo_res.jpg",
     "author": "DemoHub",
