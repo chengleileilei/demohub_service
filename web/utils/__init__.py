@@ -6,5 +6,5 @@ def sort_dict_by_priority(input_dict):
     return dict(sorted(input_dict.items(), key=lambda x: x[1]['priority']))
 
 
-d = {"b":{"1":2,"2":2,"priority":2},"a":{"1":2,"2":2,"priority":1}}
-print(sort_dict_by_priority(d))
+# d = {"b":{"1":2,"2":2,"priority":2},"a":{"1":2,"2":2,"priority":1}}
+# print(sort_dict_by_priority(d))

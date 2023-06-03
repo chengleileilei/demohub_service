@@ -7,7 +7,7 @@
     "input_image_name": "../demo.jpg",
     "output_image_name": "./demo_res.jpg",
     "likes": 4,
-    "pageviews": 86,
+    "pageviews": 87,
     "show_images": [
         "../../../../web/images/street.jpg",
         "../../../../web/images/cars.jpg",

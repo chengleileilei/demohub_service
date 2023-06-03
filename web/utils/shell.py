@@ -29,5 +29,4 @@ def choose_gpu():
     res = [ x.split(':')[-1].strip() for x in res ]
     res = [ int(x.split(' ')[0]) for x in res]
     max_free = np.argmax(res)
-    # print(max_free)
     return max_free 
