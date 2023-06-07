@@ -39,3 +39,10 @@ def run_watermark_extract(classname,demoname,image_path,demoparams,conda_env):
     command +=  'python ' + demo_path+' ' + '--img' + ' ' + '\"' + image_path  +'\"'  
     print(command)
     return subprocess_popen(command)
+
+def run_diffusion_text2img(classname,demoname,image_path,text_path,demoparams,conda_env):
+    demo_path = get_demo_abspath(classname,demoname,pyname='diffusion_text2img.py')
+    command = active_conda_command(conda_env)
+    command +=  'python ' + demo_path+' ' + '--img' + ' ' + '\"' + pngToJpg(image_path)  +'\"' + ' '  + '--text' + ' ' +'\"'+text_path +'\"'
+    print(command)
+    return subprocess_popen(command)
