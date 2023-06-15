@@ -9,5 +9,7 @@ demohub/docs/
 demohub/utils/
 demohub/demohub/object_detection/mmdetection/checkpoints/*
 demohub/demohub/segmentation/mmsegmentation/checkpoints/*
-demohub/demohub/diffusion/*
+demohub/demohub/diffusion/models/stable_diffusion/*
+*.jpg
+*.png
 !.gitkeep

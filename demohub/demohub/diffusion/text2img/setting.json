@@ -1,0 +1,26 @@
+{
+    "args": {
+        "prompt": {
+            "type": "string",
+            "default": "a painting of a virus monster playing guitar"
+        }
+    },
+    "conda_env": "ldm",
+    "name": {
+        "en": "Text To Image",
+        "cn": "文字生成图像"
+    },
+    "input_image_name": "demo.png",
+    "output_image_name": "demo.png",
+    "show_images": [
+        "../../../../web/images/demo.jpg",
+        "../../../../web/images/airplane.jpg",
+        "../../../../web/images/bird.jpg",
+        "../../../../web/images/cat.jpg",
+        "../../../../web/images/chair.jpg",
+        "../../../../web/images/deer.jpg"
+    ],
+    "likes": 4,
+    "pageviews": 484,
+    "author": "DemoHub"
+}

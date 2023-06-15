@@ -1,0 +1,1 @@
+python img2img.py --prompt "Tennis player on a horse" --init-img demo.png --strength 0.8
