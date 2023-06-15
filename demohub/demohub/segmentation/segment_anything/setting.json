@@ -1,4 +1,13 @@
 {
+    "author": "DemoHub",
+    "name": {
+        "en": "Segment Anything",
+        "cn": "Segment Anything"
+    },
+    "input_image_name": "../demo.jpg",
+    "output_image_name": "./demo_res.jpg",
+    "likes": 5,
+    "pageviews": 158,
     "show_images": [
         "../../../../web/images/street.jpg",
         "../../../../web/images/cars.jpg",
@@ -7,14 +16,5 @@
         "../../../../web/images/chair.jpg",
         "../../../../web/images/runners.jpg"
     ],
-    "conda_env": "demohub.mmdetection",
-    "likes": 1,
-    "pageviews": 27,
-    "input_image_name": "../demo.jpg",
-    "output_image_name": "./demo_res.jpg",
-    "author": "DemoHub",
-    "name": {
-        "en": "Grid R-CNN",
-        "cn": "Grid R-CNN"
-    }
+    "conda_env": "seganything"
 }

@@ -1,6 +1,6 @@
 from .shell import *
 from .image import *
-__all__ = ['subprocess_popen','choose_gpu','pngToJpg','sort_dict_by_priority']
+__all__ = ['subprocess_popen','choose_gpu','pngToJpg','sort_dict_by_priority','center_crop_multiple64']
 
 def sort_dict_by_priority(input_dict):
     return dict(sorted(input_dict.items(), key=lambda x: x[1]['priority']))

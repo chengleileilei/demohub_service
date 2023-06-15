@@ -18,9 +18,9 @@
         }
     },
     "likes": 6,
-    "pageviews": 234,
+    "pageviews": 235,
     "author": "DemoHub",
-    "conda_env": "demohub.canny",
+    "conda_env": "demohub.cv2",
     "name": {
         "en": "Canny",
         "cn": "Canny"

@@ -10,9 +10,9 @@
         }
     },
     "likes": 5,
-    "pageviews": 200,
+    "pageviews": 202,
     "author": "DemoHub",
-    "conda_env": "demohub.equalize_hist",
+    "conda_env": "demohub.cv2",
     "name": {
         "en": "EqualizeHist",
         "cn": "EqualizeHist"

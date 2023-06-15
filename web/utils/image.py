@@ -25,3 +25,32 @@ def pngToJpg(image_path):
         return new_image_path
     else:
         return image_path
+
+def center_crop_multiple64(image_path):
+    
+    # 读取图片
+    image_path = os.path.abspath(image_path)
+    img = imread(image_path)
+
+    # 计算裁剪后的大小
+    height, width, _ = img.shape
+    new_width = width // 64 * 64
+    new_height = height // 64 * 64
+
+    # 计算裁剪区域
+    left = (width - new_width) // 2
+    top = (height - new_height) // 2
+    right = left + new_width
+    bottom = top + new_height
+
+    # 裁剪图片
+    cropped_img = img[top:bottom, left:right]
+
+    # 保存裁剪后的图片
+    cropped_img_path = os.path.splitext(image_path)[0] + '_cropped.jpg'
+    imwrite(cropped_img_path, cropped_img)
+
+    # 删除原图片
+    # os.remove(image_path)
+
+    return cropped_img_path

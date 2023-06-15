@@ -178,7 +178,7 @@ def submit():
     # print("收到的原始参数：",demoparams)
     demoparams_str = ''
     for (arg_name,arg_value) in demoparams.items():
-        demoparams_str += '--' +arg_name + ' ' + str(arg_value) + ' ' 
+        demoparams_str += '--' +arg_name + ' \"' + str(arg_value) + '\" ' 
     demoparams_str.replace("(","\(").replace(")","\)")  # inux5.0之后，bash命令参数不能带有括号，需要转译
     # conda_env = p["conda_env"]
     # print(demoparams_str)
